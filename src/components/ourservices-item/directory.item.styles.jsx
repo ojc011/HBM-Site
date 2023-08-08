@@ -11,7 +11,7 @@ export const BackgroundImage = styled.div`
 
 export const BodyLink = styled(Link)`
     height: 90px;
-    padding: 0 25px;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;

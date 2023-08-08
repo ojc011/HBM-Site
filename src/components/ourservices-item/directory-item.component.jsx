@@ -13,7 +13,6 @@ const DirectoryItem = ({ category }) => {
             <BodyLink>
                 <div>
                     <h2>{title}</h2>
-                    <p>More info</p>
                 </div>
             </BodyLink>
         </DirectoryItemContainer>

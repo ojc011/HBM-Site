@@ -1,4 +1,4 @@
-import DirectoryItem from '../directory-item/directory-item.component';
+import DirectoryItem from '../ourservices-item/directory-item.component';
 import { DirectoryContainer } from './directory.styles.jsx';
 
 const Directory = ({ categories }) => {
