@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const mediumDeviceQuery = "@media (min-width: 768px)";
+const smallDeviceQuery = "@media (max-width: 767px)";
+
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: bold;
@@ -19,15 +22,17 @@ export const PageContainer = styled.div`
   position: relative;
 
   @media (min-width: 768px) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5;
-      z-index: -1;
+    ${mediumDeviceQuery} {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        z-index: -1;
+      }
     }
   }
 `;
@@ -36,8 +41,15 @@ export const ContactContainer = styled.div`
   background-color: #222a57;
   padding: 20px;
   border-radius: 8px;
-  width: 33%;
-  margin-top: 15px;
+  width: 100%; /* Initially take 100% width on all devices */
+
+  ${mediumDeviceQuery} {
+    width: 66%; /* Take up 66% width on medium devices */
+  }
+
+  ${smallDeviceQuery} {
+    width: 100%; /* Take up 100% width on small or mobile devices */
+  }
 `;
 
 export const Form = styled.form`

@@ -1,8 +1,9 @@
 import Directory from "../../components/our-services/directory.component";
-import HomePage from "../../components/about-us/aboutus.component";
+import MainPage from "../../components/about-us/aboutus.component";
 import SafetyComponent from "../../components/safety/safety.component";
 import ApprovedBy from "../../components/portfolio/portfolio.component";
 import ContactForm from "../../components/contact/contact-form.component";
+import { Fragment } from "react";
 
 const Home = () => {
   const categories = [
@@ -39,11 +40,13 @@ const Home = () => {
   ];
   return (
     <div>
-      <Directory categories={categories} />
-      <HomePage />
-      <ContactForm />
-      <ApprovedBy />
-      <SafetyComponent />
+      <Fragment>
+        <Directory categories={categories} />
+        <MainPage />
+        <ContactForm />
+        <ApprovedBy />
+        <SafetyComponent />
+      </Fragment>
     </div>
   );
 };
