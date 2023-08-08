@@ -8,6 +8,7 @@ export const MPContainer = styled.div`
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap on small/mobile devices */
   padding: 20px;
+  margin-bottom: 7.5px;
   width: 100%;
   background-color: #ca2236;
   color: #ffffff;

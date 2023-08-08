@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+const largeDeviceQuery = "@media (min-width: 992px)";
 const mediumDeviceQuery = "@media (min-width: 768px)";
 const smallDeviceQuery = "@media (max-width: 767px)";
 
@@ -7,12 +8,12 @@ export const Title = styled.h1`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: black;
+  color: white;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
   border-radius: 8px;
-  width: 100%;
+  width: 33%;
 `;
 
 export const PageContainer = styled.div`
@@ -38,7 +39,7 @@ export const PageContainer = styled.div`
 `;
 
 export const ContactContainer = styled.div`
-  background-color: #222a57;
+  background-color: rgba(34, 42, 87, 0.7);
   padding: 20px;
   border-radius: 8px;
   width: 100%; /* Initially take 100% width on all devices */
@@ -47,9 +48,24 @@ export const ContactContainer = styled.div`
     width: 66%; /* Take up 66% width on medium devices */
   }
 
+  ${largeDeviceQuery} {
+    width: 33%; /* Take up 33% width on large devices */
+  }
+
   ${smallDeviceQuery} {
     width: 100%; /* Take up 100% width on small or mobile devices */
   }
+`;
+
+export const VideoBackground = styled.video`
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 `;
 
 export const Form = styled.form`

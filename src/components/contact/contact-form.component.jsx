@@ -13,6 +13,7 @@ import {
   Form,
   ContactContainer,
   PageContainer,
+  VideoBackground,
 } from "./contact-form.styles";
 
 const ContactForm = () => {
@@ -45,6 +46,10 @@ const ContactForm = () => {
     <PageContainer>
       <Title>Contact Form</Title>
       <ContactContainer>
+        <VideoBackground autoPlay muted loop>
+          <source src="http://localhost:3000/dronevid.mp4" type="video/mp4" />
+          {/* Add more <source> elements for different video formats */}
+        </VideoBackground>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
             <Label>Name:</Label>
