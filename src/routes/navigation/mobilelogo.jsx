@@ -5,6 +5,7 @@ import styled from "styled-components";
 import MobileLogoImage from "../../assets/haydenlogohighres.png"; // Import the mobile logo image
 
 const MobileLogoContainer = styled.div`
+  margin-left: 50px;
   padding-top: 5px;
   display: none;
   width: auto; /* Set the width to a suitable size for the mobile logo container */

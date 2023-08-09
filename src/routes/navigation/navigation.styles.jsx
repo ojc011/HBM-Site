@@ -21,6 +21,7 @@ export const NavigationContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
+  margin-left: 50px;
   height: auto;
   width: auto;
   align-items: center;
@@ -62,6 +63,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const MobileMenuIcon = styled.div`
+  margin-right: 50px;
   display: none;
   cursor: pointer;
   z-index: 1000;
