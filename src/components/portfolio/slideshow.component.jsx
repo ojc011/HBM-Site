@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import {
   Container,
   Title,
@@ -26,8 +27,13 @@ const Slideshow = ({ items }) => {
     );
   };
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNextSlide,
+    onSwipedRight: handlePrevSlide,
+  });
+
   return (
-    <Container id="portfolio">
+    <Container id="portfolio" {...swipeHandlers}>
       <Title>Approved By</Title>
       <ParentContainer
         style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
