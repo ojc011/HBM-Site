@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const smallDeviceQuery = "@media (max-width: 480px)";
 const mediumDeviceQuery = "@media (min-width: 481px) and (max-width: 768px)";
+const largeDeviceQuery = "@media (min-width: 769px)";
 
 export const BackgroundImage = styled.div`
   width: 100%;
@@ -77,10 +78,16 @@ export const DirectoryItemContainer = styled.div`
   ${smallDeviceQuery} {
     min-width: 100%; /* Adjust width to full-width on small/mobile devices */
     height: 160px; /* Further reduce height on small/mobile devices */
+    margin-bottom: 5px;
   }
 
   ${mediumDeviceQuery} {
     min-width: 50%; /* Adjust width on medium devices */
     height: 200px; /* Adjust height on medium devices */
+    margin: 0 7.5px 15px;
+  }
+
+  ${largeDeviceQuery} {
+    margin: 0 7.5px 15px;
   }
 `;
