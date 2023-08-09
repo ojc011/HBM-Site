@@ -60,13 +60,8 @@ export const DirectoryItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  margin: 0 7.5px 15px;
+  border: 2px solid black;
   overflow: hidden;
-
-  &:first-child {
-    margin-right: 7.5px;
-  }
 
   &:hover {
     cursor: pointer;
