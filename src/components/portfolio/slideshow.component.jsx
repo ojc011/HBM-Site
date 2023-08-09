@@ -27,7 +27,7 @@ const Slideshow = ({ items }) => {
   };
 
   return (
-    <Container>
+    <Container id="portfolio">
       <Title>Approved By</Title>
       <ParentContainer
         style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}

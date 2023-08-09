@@ -16,6 +16,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 `;
 
 export const ParentContainer = styled.div`
@@ -81,7 +82,7 @@ export const ItemImage = styled.img`
   height: auto;
   border-radius: 10px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 export const ItemTitle = styled.h2`
@@ -99,13 +100,16 @@ export const SlideButtonsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 400px;
-  margin: 20px auto;
+  margin: 5px auto;
 `;
 
 export const SlideButton = styled.button`
+  height: 40px;
+  width: 100px;
   background-color: #333;
   color: white;
   border: none;
+  margin: 10px;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;

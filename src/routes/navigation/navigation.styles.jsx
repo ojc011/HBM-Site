@@ -8,7 +8,9 @@ import BurgerIconImage from "../../assets/burger.png"; // Import the PNG image f
 export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
+  max-width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
@@ -32,10 +34,8 @@ export const LogoContainer = styled(Link)`
 export const StyledLogo = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensure the image fits inside the container without stretching */
-
-  /* Show the regular logo on medium and large devices */
-  @media (max-width: 768px) {
+  object-fit: contain;
+  @media (max-width: 900px) {
     display: block;
   }
 `;
@@ -47,62 +47,79 @@ export const NavLinks = styled.div`
   align-items: center;
   justify-content: flex-end;
   font-weight: bold;
-
-  /* Apply styles for small and medium devices */
-  @media (max-width: 768px) {
-    display: none; /* Hide regular links on small devices */
+  @media (max-width: 900px) {
+    display: none;
   }
 `;
 
 export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+  white-space: nowrap;
 `;
 
 export const MobileMenuIcon = styled.div`
   display: none;
   cursor: pointer;
   z-index: 1000;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-image: url(${BurgerIconImage});
   background-size: cover;
-
-  /* Display MobileMenuIcon (Burger menu) on small and medium devices */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: flex;
   }
 `;
 
 export const MobileMenuItem = styled.div`
   padding: 10px 15px;
-  border-bottom: 1px solid black;
   width: 100%;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+`;
+
+export const MobileLogoAboveLinks = styled.img`
+  width: 75px; /* Set the width of the logo */
+  height: auto;
+  margin-bottom: 10px; /* Add some spacing below the logo */
 `;
 
 export const MobileMenu = styled.div`
-  position: absolute;
-  top: 70px;
-  right: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: white;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
+  padding: 20px;
 
   ${MobileMenuItem}:last-child {
     border-bottom: none;
   }
 
-  /* Show MobileMenu on small and medium devices */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: flex;
   }
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 60px;
+  cursor: pointer;
 `;
 
 export default MobileLogo;

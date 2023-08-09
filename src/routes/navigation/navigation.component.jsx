@@ -1,10 +1,8 @@
-// Navigation.js
-
 import { Fragment, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import HaydenLogo from "../../assets/logotransparent.gif";
 import MobileLogo from "./mobilelogo";
-
+import SmallLogo from "../../assets/logo1.png";
 import {
   NavigationContainer,
   NavLinks,
@@ -14,6 +12,8 @@ import {
   MobileMenuIcon,
   MobileMenu,
   MobileMenuItem,
+  MobileLogoAboveLinks,
+  CloseButton,
 } from "./navigation.styles";
 
 const Navigation = () => {
@@ -23,41 +23,78 @@ const Navigation = () => {
     setMobileMenuOpen((prev) => !prev);
   };
 
+  const handleMobileMenuLinkClick = (sectionId) => {
+    setMobileMenuOpen(false);
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <Fragment>
       <NavigationContainer>
-        {/* Show the regular logo on medium and large devices */}
         <MobileLogo />
         <LogoContainer to="/">
           <StyledLogo alt="" className="logo" src={HaydenLogo} />
         </LogoContainer>
         <NavLinks>
-          <NavLink>Home</NavLink>
-          <NavLink>Our Services</NavLink>
-          <NavLink>About Us</NavLink>
-          <NavLink>Contact Us</NavLink>
-          <NavLink>Portfolio</NavLink>
-          <NavLink>Safety</NavLink>
+          {/* Links to sections */}
+          <NavLink onClick={() => handleMobileMenuLinkClick("home")}>
+            Home
+          </NavLink>
+          <NavLink onClick={() => handleMobileMenuLinkClick("services")}>
+            Our Services
+          </NavLink>
+          <NavLink onClick={() => handleMobileMenuLinkClick("aboutus")}>
+            About Us
+          </NavLink>
+          <NavLink onClick={() => handleMobileMenuLinkClick("contact")}>
+            Contact Us
+          </NavLink>
+          <NavLink onClick={() => handleMobileMenuLinkClick("portfolio")}>
+            Portfolio
+          </NavLink>
+          <NavLink onClick={() => handleMobileMenuLinkClick("safety")}>
+            Safety
+          </NavLink>
         </NavLinks>
-        {/* Show MobileMenuIcon (Burger menu) on small and medium devices */}
         <MobileMenuIcon onClick={handleMobileMenuToggle}>
           <div></div>
           <div></div>
           <div></div>
         </MobileMenuIcon>
       </NavigationContainer>
-      {/* Show MobileMenu on small and medium devices if isMobileMenuOpen is true */}
       {isMobileMenuOpen && (
         <MobileMenu>
-          <MobileMenuItem>Home</MobileMenuItem>
-          <MobileMenuItem>Our Services</MobileMenuItem>
-          <MobileMenuItem>About Us</MobileMenuItem>
-          <MobileMenuItem>Contact Us</MobileMenuItem>
-          <MobileMenuItem>Portfolio</MobileMenuItem>
-          <MobileMenuItem>Safety</MobileMenuItem>
+          <CloseButton onClick={handleMobileMenuToggle}>×</CloseButton>
+          <MobileLogoAboveLinks src={SmallLogo} alt="Mobile Logo Above Links" />
+          <Link
+            to="home"
+            smooth="true"
+            duration={500}
+            onClick={handleMobileMenuLinkClick}
+          ></Link>
+          {/* Mobile menu links */}
+          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("home")}>
+            Home
+          </MobileMenuItem>
+          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("services")}>
+            Our Services
+          </MobileMenuItem>
+          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("aboutus")}>
+            About Us
+          </MobileMenuItem>
+          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("contact")}>
+            Contact Us
+          </MobileMenuItem>
+          <MobileMenuItem
+            onClick={() => handleMobileMenuLinkClick("portfolio")}
+          >
+            Portfolio
+          </MobileMenuItem>
+          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("safety")}>
+            Safety
+          </MobileMenuItem>
         </MobileMenu>
       )}
-      {/* Render Outlet to show the content of the current route */}
       <Outlet />
     </Fragment>
   );

@@ -43,7 +43,7 @@ const ContactForm = () => {
   };
 
   return (
-    <PageContainer>
+    <PageContainer id="contact">
       <Title>Contact Form</Title>
       <ContactContainer>
         <VideoBackground autoPlay muted loop>

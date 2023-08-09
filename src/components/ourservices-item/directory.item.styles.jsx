@@ -85,7 +85,7 @@ export const DirectoryItemContainer = styled.div`
   }
 
   ${mediumDeviceQuery} {
-    min-width: 48%; /* Adjust width on medium devices */
+    min-width: 50%; /* Adjust width on medium devices */
     height: 200px; /* Adjust height on medium devices */
   }
 `;

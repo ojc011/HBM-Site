@@ -39,7 +39,7 @@ const Home = () => {
     },
   ];
   return (
-    <div>
+    <div id="home">
       <Fragment>
         <Directory categories={categories} />
         <MainPage />
