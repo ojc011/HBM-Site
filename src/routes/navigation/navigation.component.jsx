@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import HaydenLogo from "../../assets/logotransparent.gif";
+import HaydenLogo from "../../assets/haydenlogohighres.png";
 import MobileLogo from "./mobilelogo";
 import SmallLogo from "../../assets/logo1.png";
 import {

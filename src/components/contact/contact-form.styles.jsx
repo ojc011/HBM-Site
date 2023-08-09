@@ -21,6 +21,7 @@ export const PageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin-bottom: 7.5px;
 
   @media (min-width: 768px) {
     ${mediumDeviceQuery} {

@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
+  border: 3px solid #222a57;
   font-family: Arial, sans-serif;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {

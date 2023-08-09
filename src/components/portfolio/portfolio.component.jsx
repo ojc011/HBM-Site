@@ -1,5 +1,6 @@
 import React from "react";
 import Slideshow from "./slideshow.component"; // Update the path to the Slideshow component
+
 const items = [
   {
     imageSrc: "https://i.imgur.com/5wvcLJn.png",

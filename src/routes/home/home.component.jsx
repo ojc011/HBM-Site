@@ -4,6 +4,7 @@ import SafetyComponent from "../../components/safety/safety.component";
 import ApprovedBy from "../../components/portfolio/portfolio.component";
 import ContactForm from "../../components/contact/contact-form.component";
 import { Fragment } from "react";
+import Footer from "../../components/footer/footer.component";
 
 const Home = () => {
   const categories = [
@@ -46,6 +47,7 @@ const Home = () => {
         <ContactForm />
         <ApprovedBy />
         <SafetyComponent />
+        <Footer />
       </Fragment>
     </div>
   );

@@ -10,6 +10,7 @@ import {
   SlideButtonsContainer,
   SlideButton,
   SlideCard,
+  BackgroundComponent,
 } from "./portfolio.styles";
 
 const Slideshow = ({ items }) => {
@@ -33,24 +34,26 @@ const Slideshow = ({ items }) => {
   });
 
   return (
-    <Container id="portfolio" {...swipeHandlers}>
-      <Title>Approved By</Title>
-      <ParentContainer
-        style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
-      >
-        {items.map((item, index) => (
-          <SlideCard key={index}>
-            <ItemImage src={item.imageSrc} alt={item.title} />
-            <ItemTitle>{item.title}</ItemTitle>
-            <ItemDescription>{item.description}</ItemDescription>
-          </SlideCard>
-        ))}
-      </ParentContainer>
-      <SlideButtonsContainer>
-        <SlideButton onClick={handlePrevSlide}>Previous</SlideButton>
-        <SlideButton onClick={handleNextSlide}>Next</SlideButton>
-      </SlideButtonsContainer>
-    </Container>
+    <BackgroundComponent>
+      <Container id="portfolio" {...swipeHandlers}>
+        <Title>Approved By</Title>
+        <ParentContainer
+          style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
+        >
+          {items.map((item, index) => (
+            <SlideCard key={index}>
+              <ItemImage src={item.imageSrc} alt={item.title} />
+              <ItemTitle>{item.title}</ItemTitle>
+              <ItemDescription>{item.description}</ItemDescription>
+            </SlideCard>
+          ))}
+        </ParentContainer>
+        <SlideButtonsContainer>
+          <SlideButton onClick={handlePrevSlide}>Previous</SlideButton>
+          <SlideButton onClick={handleNextSlide}>Next</SlideButton>
+        </SlideButtonsContainer>
+      </Container>
+    </BackgroundComponent>
   );
 };
 

@@ -21,20 +21,23 @@ export const NavigationContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
-  display: flex;
   height: auto;
   width: auto;
   align-items: center;
   padding: 2px;
+  display: block;
+  width: auto; /* Make the mobile logo container full width on small and medium devices */
+  height: 70px; /* Allow the height to adjust based on the logo size */
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
 export const StyledLogo = styled.img`
-  width: 100%;
+  display: flex;
+  width: auto;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* Ensure the image fits inside the container without stretching */
   @media (max-width: 900px) {
     display: block;
   }

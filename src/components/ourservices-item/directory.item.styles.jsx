@@ -22,7 +22,7 @@ export const BodyLink = styled(Link)`
   justify-content: center;
   border: 1px solid black;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.6;
   position: absolute;
   border-radius: 10px;
   text-align: center; /* Center text in the link */

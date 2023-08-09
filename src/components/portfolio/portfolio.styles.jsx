@@ -1,15 +1,20 @@
 import styled from "styled-components";
+import backgroundImage from "../../assets/sitebackground.jpeg";
 
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 5px;
-  color: black; /* Set Title text color to black */
+  margin-bottom: 2px;
+  color: #ffff; /* Set Title text color to black */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
   border-radius: 8px;
-  width: 100%; /* Make Title span the entire width */
+  width: 33%; /* Make Title span the entire width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto; /* Center horizontally */
 `;
 
 export const Container = styled.div`
@@ -17,6 +22,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 7.5px;
 `;
 
 export const ParentContainer = styled.div`
@@ -60,7 +66,7 @@ export const ItemContainer = styled.div`
   height: 100%;
   min-width: 33.33%; /* Set width to fit three cards */
   flex: 0 0 auto;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 8px;
   width: 90%; /* Reduce the width on small screens */
@@ -89,10 +95,12 @@ export const ItemTitle = styled.h2`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #ffff;
 `;
 
 export const ItemDescription = styled.p`
   font-size: 14px;
+  color: #ffff;
 `;
 
 export const SlideButtonsContainer = styled.div`
@@ -127,4 +135,14 @@ export const SlideCard = styled(ItemContainer)`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+`;
+
+export const BackgroundComponent = styled.div`
+  width: 100%;
+  height: auto; /* Adjust height to your needs */
+  background-image: url(${backgroundImage});
+  background-size: cover; /* Scale the image to cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  border-radius: 5px;
 `;
