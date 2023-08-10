@@ -4,6 +4,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @media (min-width: 1600px) {
+    max-width: 1600px;
+    margin: 0 auto; /* Center the content horizontally within the wrapper */
+    padding: 0 20px; /* Optional padding to provide space on the sides */
+  }
 }
 
 /* Global CSS */

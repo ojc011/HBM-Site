@@ -65,12 +65,7 @@ export const ArrowButton = styled.button`
   padding: 0;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
   font-size: 24px;
-
-  &:hover {
-    background-color: #ddd;
-  }
 `;
 
 export const LeftArrowButton = styled(ArrowButton)`
