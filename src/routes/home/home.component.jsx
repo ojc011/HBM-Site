@@ -1,7 +1,7 @@
 import Directory from "../../components/our-services/directory.component";
 import MainPage from "../../components/about-us/aboutus.component";
 import SafetyComponent from "../../components/safety/safety.component";
-import ApprovedBy from "../../components/portfolio/portfolio.component";
+import ApprovedBy from "../../components/portfolio/slideshow.component";
 import ContactForm from "../../components/contact/contact-form.component";
 import { Fragment } from "react";
 import Footer from "../../components/footer/footer.component";
