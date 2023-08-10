@@ -22,7 +22,6 @@ export const PageContainer = styled.div`
   align-items: center;
   position: relative;
   margin-bottom: 7.5px;
-  border: 2px solid #000000;
   border-radius: 5px;
 
   @media (min-width: 768px) {
