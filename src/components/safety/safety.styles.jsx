@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 3px solid #222a57;
+  border: 2px solid #222a57;
   font-family: Arial, sans-serif;
   width: 100%;
   margin: 0 auto;

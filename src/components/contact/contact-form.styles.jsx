@@ -12,7 +12,7 @@ export const Title = styled.h1`
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 33%;
 `;
 
@@ -22,6 +22,8 @@ export const PageContainer = styled.div`
   align-items: center;
   position: relative;
   margin-bottom: 7.5px;
+  border: 2px solid #000000;
+  border-radius: 5px;
 
   @media (min-width: 768px) {
     ${mediumDeviceQuery} {

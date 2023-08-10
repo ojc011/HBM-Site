@@ -9,7 +9,7 @@ export const Title = styled.h1`
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 33%; /* Make Title span the entire width */
   display: flex;
   flex-direction: column;
@@ -23,6 +23,8 @@ export const Container = styled.div`
   width: 100%;
   overflow: hidden;
   margin-bottom: 7.5px;
+  border: 2px solid #000000;
+  border-radius: 5px;
 `;
 
 export const ParentContainer = styled.div`

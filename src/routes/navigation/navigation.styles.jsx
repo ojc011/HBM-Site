@@ -16,8 +16,10 @@ export const NavigationContainer = styled.div`
   margin-bottom: 25px;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 999;
+  border: 2px solid #000000;
+  border-radius: 5px;
 `;
 
 export const LogoContainer = styled(Link)`

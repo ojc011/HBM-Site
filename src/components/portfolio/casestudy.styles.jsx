@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const TestimonialsContainer = styled.div`
-  background-color: #f5f5f5;
+  background-color: #f3f3f3;
   padding: 20px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 7.5px;
 `;
 
 export const TestimonialsTitle = styled.h2`
