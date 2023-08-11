@@ -78,7 +78,6 @@ export const MobileMenuIcon = styled.div`
     display: flex;
   }
   @media (max-width: 600px) {
-    display: flex;
     width: 30px; /* Adjust the width for smaller screens */
     height: 30px; /* Adjust the height for smaller screens */
   }
