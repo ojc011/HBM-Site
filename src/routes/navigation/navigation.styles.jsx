@@ -69,7 +69,7 @@ export const MobileMenuIcon = styled.div`
   display: none;
   cursor: pointer;
   z-index: 1000;
-  width: auto;
+  width: 50px;
   height: 50px;
 
   @media (max-width: 900px) {
