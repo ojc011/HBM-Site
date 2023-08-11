@@ -72,9 +72,15 @@ export const MobileMenuIcon = styled.div`
   width: 50px;
   height: 50px;
   background-image: url("/assets/burger.png");
-  background-size: cover;
+  background-size: contain; /* Adjust background size to contain */
+
   @media (max-width: 900px) {
     display: flex;
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    width: 30px; /* Adjust the width for smaller screens */
+    height: 30px; /* Adjust the height for smaller screens */
   }
 `;
 
