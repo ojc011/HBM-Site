@@ -59,6 +59,11 @@ const Navigation = () => {
           </NavLink>
         </NavLinks>
         <MobileMenuIcon onClick={handleMobileMenuToggle}>
+          <img
+            src="/assets/burger.png"
+            alt="MobileMenuIcon"
+            style={{ width: "100%", height: "100%" }}
+          />
           <div></div>
           <div></div>
           <div></div>
