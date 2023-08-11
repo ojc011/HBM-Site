@@ -66,11 +66,11 @@ export const NavLink = styled(Link)`
 
 export const MobileMenuIcon = styled.div`
   margin-right: 75px;
-  display: none;
-  cursor: pointer;
-  z-index: 1000;
-  width: auto;
+  width: 50px;
   height: 50px;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
 
   @media (max-width: 900px) {
     display: flex;

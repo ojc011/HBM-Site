@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const MobileLogoContainer = styled.div`
-  margin-left: 50px;
+  margin-left: 75px;
   padding-top: 5px;
   display: none;
   width: auto; /* Set the width to a suitable size for the mobile logo container */
@@ -30,7 +30,10 @@ const MobileLogo = () => {
   return (
     <Link to="/">
       <MobileLogoContainer to="/">
-        <MobileLogoImageStyled src="/assets/haydenlogohighres.png" alt="Mobile Logo" />
+        <MobileLogoImageStyled
+          src="/assets/haydenlogohighres.png"
+          alt="Mobile Logo"
+        />
       </MobileLogoContainer>
     </Link>
   );
