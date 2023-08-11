@@ -5,13 +5,28 @@ const smallDeviceQuery = "@media (max-width: 480px)";
 const mediumDeviceQuery = "@media (min-width: 481px) and (max-width: 768px)";
 const largeDeviceQuery = "@media (min-width: 769px)";
 
-export const BackgroundImage = styled.div`
+export const StyledBackgroundImage = styled.div`
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-image: ${({ imageurl }) => `url(${imageurl})`};
 `;
+
+// Use the $ sign to indicate that imageUrl is a transient prop
+StyledBackgroundImage.defaultProps = {
+  $imageUrl: "none",
+};
+
+// Define the shouldForwardProp function to filter out transient props
+const shouldForwardProp = (prop) => {
+  return prop !== "$imageUrl";
+};
+
+// Wrap the StyledBackgroundImage component with StyleSheetManager and use shouldForwardProp
+export const BackgroundImage = styled(StyledBackgroundImage).withConfig({
+  shouldForwardProp,
+})``;
 
 export const BodyLink = styled(Link)`
   height: 50px;

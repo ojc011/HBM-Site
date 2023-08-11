@@ -2,7 +2,7 @@
 
 import React from "react"; // Don't forget to import React
 import styled from "styled-components";
-import MobileLogoImage from "../../assets/haydenlogohighres.png"; // Import the mobile logo image
+import { Link } from "react-router-dom";
 
 const MobileLogoContainer = styled.div`
   margin-left: 50px;
@@ -28,9 +28,11 @@ const MobileLogoImageStyled = styled.img`
 
 const MobileLogo = () => {
   return (
-    <MobileLogoContainer>
-      <MobileLogoImageStyled src={MobileLogoImage} alt="Mobile Logo" />
-    </MobileLogoContainer>
+    <Link to="/">
+      <MobileLogoContainer to="/">
+        <MobileLogoImageStyled src="/assets/haydenlogohighres.png" alt="Mobile Logo" />
+      </MobileLogoContainer>
+    </Link>
   );
 };
 

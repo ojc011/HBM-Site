@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the video file
 app.get('/dronevid.mp4', (req, res) => {
-  const videoPath = path.join(__dirname, 'src/assets', 'dronevid.mp4');
+  const videoPath = path.join(__dirname, 'public/assets', 'dronevid.mp4');
   
   // Set the appropriate Content-Type header
   res.setHeader('Content-Type', 'video/mp4');

@@ -1,20 +1,18 @@
+// DirectoryItem.jsx
+import React from "react";
 import {
   BackgroundImage,
-  BodyLink,
   DirectoryItemContainer,
+  BodyLink,
 } from "./directory.item.styles.jsx";
 
-const DirectoryItem = ({ category }) => {
-  const { imageUrl, title } = category;
+const DirectoryItem = ({ category, route }) => {
+  const { imageurl, title } = category;
 
   return (
     <DirectoryItemContainer id="services">
-      <BackgroundImage
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-        }}
-      />
-      <BodyLink>
+      <BackgroundImage imageurl={imageurl} />
+      <BodyLink to={route}>
         <div>
           <h2>{title}</h2>
         </div>

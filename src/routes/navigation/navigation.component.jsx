@@ -1,8 +1,6 @@
 import { Fragment, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import HaydenLogo from "../../assets/haydenlogohighres.png";
 import MobileLogo from "./mobilelogo";
-import SmallLogo from "../../assets/logo1.png";
 import {
   NavigationContainer,
   NavLinks,
@@ -33,7 +31,11 @@ const Navigation = () => {
       <NavigationContainer>
         <MobileLogo />
         <LogoContainer to="/">
-          <StyledLogo alt="" className="logo" src={HaydenLogo} />
+          <StyledLogo
+            alt=""
+            className="logo"
+            src="/assets/haydenlogohighres.png"
+          />
         </LogoContainer>
         <NavLinks>
           {/* Links to sections */}
@@ -65,7 +67,10 @@ const Navigation = () => {
       {isMobileMenuOpen && (
         <MobileMenu>
           <CloseButton onClick={handleMobileMenuToggle}>×</CloseButton>
-          <MobileLogoAboveLinks src={SmallLogo} alt="Mobile Logo Above Links" />
+          <MobileLogoAboveLinks
+            src="/assets/logo1.png"
+            alt="Mobile Logo Above Links"
+          />
           <Link
             to="home"
             smooth="true"

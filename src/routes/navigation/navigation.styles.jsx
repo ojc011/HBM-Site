@@ -3,7 +3,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import MobileLogo from "./mobilelogo";
-import BurgerIconImage from "../../assets/burger.png"; // Import the PNG image for the burger icon
 
 export const NavigationContainer = styled.div`
   height: 70px;
@@ -20,6 +19,7 @@ export const NavigationContainer = styled.div`
   z-index: 999;
   border: 2px solid #000000;
   border-radius: 5px;
+  opacity: 0.85;
 `;
 
 export const LogoContainer = styled(Link)`
@@ -71,7 +71,7 @@ export const MobileMenuIcon = styled.div`
   z-index: 1000;
   width: 50px;
   height: 50px;
-  background-image: url(${BurgerIconImage});
+  background-image: url("/assets/burger.png");
   background-size: cover;
   @media (max-width: 900px) {
     display: flex;

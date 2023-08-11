@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import backgroundImage from "../../assets/sitebackground.jpeg";
 
 export const Title = styled.h1`
   font-size: 24px;
@@ -142,7 +141,7 @@ export const SlideCard = styled(ItemContainer)`
 export const BackgroundComponent = styled.div`
   width: 100%;
   height: auto; /* Adjust height to your needs */
-  background-image: url(${backgroundImage});
+  background-image: url("/assets/sitebackground.jpeg");
   background-size: cover; /* Scale the image to cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent the image from repeating */

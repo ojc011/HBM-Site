@@ -8,7 +8,6 @@ import {
   RightContainer,
   ServiceType,
 } from "./aboutus.styles";
-import CompanyPicture from "../../assets/staffpic.png";
 
 const MainPage = () => {
   return (
@@ -34,7 +33,7 @@ const MainPage = () => {
         </DescriptionContainer>
         <CompanyPicContainer>
           <CompanyPic>
-            <img alt="" src={CompanyPicture} />
+            <img alt="" src="/assets/staffpic.png" />
           </CompanyPic>
         </CompanyPicContainer>
       </LeftContainer>
