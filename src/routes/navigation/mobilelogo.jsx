@@ -1,6 +1,6 @@
 // MobileLogo.js
 
-import React from "react"; // Don't forget to import React
+import React, { useEffect, useState } from "react"; // Don't forget to import React
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -27,9 +27,35 @@ const MobileLogoImageStyled = styled.img`
 `;
 
 const MobileLogo = () => {
+  const [targetSection, setTargetSection] = useState(null);
+
+  useEffect(() => {
+    if (targetSection) {
+      const scrollToSection = () => {
+        const element = document.getElementById(targetSection);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+      // Delay the scroll to the section after a short interval
+      const scrollTimeout = setTimeout(() => {
+        scrollToSection();
+        // Reset the target section to null after scrolling
+        setTargetSection(null);
+      }, 500); // Adjust the delay as needed
+      return () => clearTimeout(scrollTimeout);
+    }
+  }, [targetSection]);
+
+  // Function to handle navigation link clicks
+  const handleNavLinkClick = (sectionId) => {
+    // Set the target section for scrolling
+    setTargetSection(sectionId);
+  };
+
   return (
     <Link to="/">
-      <MobileLogoContainer to="/">
+      <MobileLogoContainer to="/" onClick={() => handleNavLinkClick("home")}>
         <MobileLogoImageStyled
           src="/assets/haydenlogohighres.png"
           alt="Mobile Logo"

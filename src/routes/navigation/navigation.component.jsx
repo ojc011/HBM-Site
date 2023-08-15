@@ -17,6 +17,7 @@ import {
 const Navigation = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
+  const [targetSection, setTargetSection] = useState(null);
 
   const handleMobileMenuToggle = () => {
     if (isMobileMenuOpen) {
@@ -43,29 +44,43 @@ const Navigation = () => {
   };
 
   const handleMobileMenuLinkClick = (sectionId) => {
-    // Handle link clicks
+    // Set the target section for scrolling
+    setTargetSection(sectionId);
+
+    // Handle link clicks and close the menu
     handleMobileMenuClose();
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Listen for Esc key press to close the mobile menu
+  // Use the targetSection state variable to scroll to the section after navigating to "/"
   useEffect(() => {
-    const handleEscKey = (event) => {
-      if (event.key === "Escape" && isMobileMenuOpen) {
-        handleMobileMenuClose();
-      }
-    };
+    if (targetSection) {
+      const scrollToSection = () => {
+        const element = document.getElementById(targetSection);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+      // Delay the scroll to the section after a short interval
+      const scrollTimeout = setTimeout(() => {
+        scrollToSection();
+        // Reset the target section to null after scrolling
+        setTargetSection(null);
+      }, 500); // Adjust the delay as needed
+      return () => clearTimeout(scrollTimeout);
+    }
+  }, [targetSection]);
 
-    window.addEventListener("keydown", handleEscKey);
-    return () => {
-      window.removeEventListener("keydown", handleEscKey);
-    };
-  }, [isMobileMenuOpen]);
+  // Function to handle navigation link clicks
+  const handleNavLinkClick = (sectionId) => {
+    // Set the target section for scrolling
+    setTargetSection(sectionId);
+  };
 
   return (
     <React.Fragment>
       <NavigationContainer>
-        <LogoContainer to="/">
+        <LogoContainer to="/" onClick={() => handleNavLinkClick("home")}>
+          {/* Use a styled <a> tag for the logo */}
           <StyledLogo
             alt=""
             className="logo"
@@ -73,13 +88,55 @@ const Navigation = () => {
           />
         </LogoContainer>
         <NavLinks>
-          {/* Links to sections */}
-          <NavLink onClick={() => handleMobileMenuLinkClick("home")}>Home</NavLink>
-          <NavLink onClick={() => handleMobileMenuLinkClick("services")}>Our Services</NavLink>
-          <NavLink onClick={() => handleMobileMenuLinkClick("aboutus")}>About Us</NavLink>
-          <NavLink onClick={() => handleMobileMenuLinkClick("contact")}>Contact Us</NavLink>
-          <NavLink onClick={() => handleMobileMenuLinkClick("portfolio")}>Portfolio</NavLink>
-          <NavLink onClick={() => handleMobileMenuLinkClick("safety")}>Safety</NavLink>
+          {/* Links to sections with similar behavior as mobile menu links */}
+          <NavLink
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleNavLinkClick("home")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleNavLinkClick("services")}
+          >
+            Our Services
+          </NavLink>
+          <NavLink
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleNavLinkClick("aboutus")}
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleNavLinkClick("contact")}
+          >
+            Contact Us
+          </NavLink>
+          <NavLink
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleNavLinkClick("portfolio")}
+          >
+            Portfolio
+          </NavLink>
+          <NavLink
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleNavLinkClick("safety")}
+          >
+            Safety
+          </NavLink>
           {/* Add any other NavLinks here */}
         </NavLinks>
         <MobileLogo />
@@ -99,20 +156,64 @@ const Navigation = () => {
           }}
         >
           <CloseButton onClick={handleMobileMenuClose}>×</CloseButton>
-          <MobileLogoAboveLinks src="/assets/logo1.png" alt="Mobile Logo Above Links" />
+          <MobileLogoAboveLinks
+            src="/assets/logo1.png"
+            alt="Mobile Logo Above Links"
+          />
+          {/* Home link */}
           <Link
-            to="home"
-            smooth="true"
+            to="/"
+            smooth={true}
             duration={500}
             onClick={() => handleMobileMenuLinkClick("home")}
-          ></Link>
-          {/* Mobile menu links */}
-          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("home")}>Home</MobileMenuItem>
-          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("services")}>Our Services</MobileMenuItem>
-          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("aboutus")}>About Us</MobileMenuItem>
-          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("contact")}>Contact Us</MobileMenuItem>
-          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("portfolio")}>Portfolio</MobileMenuItem>
-          <MobileMenuItem onClick={() => handleMobileMenuLinkClick("safety")}>Safety</MobileMenuItem>
+          >
+            <MobileMenuItem>Home</MobileMenuItem>
+          </Link>
+          {/* Our Services link */}
+          <Link
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleMobileMenuLinkClick("services")}
+          >
+            <MobileMenuItem>Our Services</MobileMenuItem>
+          </Link>
+          {/* About Us link */}
+          <Link
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleMobileMenuLinkClick("aboutus")}
+          >
+            <MobileMenuItem>About Us</MobileMenuItem>
+          </Link>
+          {/* Contact Us link */}
+          <Link
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleMobileMenuLinkClick("contact")}
+          >
+            <MobileMenuItem>Contact Us</MobileMenuItem>
+          </Link>
+          {/* Portfolio link */}
+          <Link
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleMobileMenuLinkClick("portfolio")}
+          >
+            <MobileMenuItem>Portfolio</MobileMenuItem>
+          </Link>
+          {/* Safety link */}
+          <Link
+            to="/"
+            smooth={true}
+            duration={500}
+            onClick={() => handleMobileMenuLinkClick("safety")}
+          >
+            <MobileMenuItem>Safety</MobileMenuItem>
+          </Link>
           {/* Add any other MobileMenu links here */}
         </MobileMenu>
       )}
