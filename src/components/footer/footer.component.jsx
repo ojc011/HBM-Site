@@ -14,24 +14,6 @@ const Footer = () => {
     <FooterContainer>
       <ContactInfo>
         <ContactItem>
-          <ContactTitle>LOUISIANA OFFICE</ContactTitle>
-          <ContactDetails>5600 Jefferson Highway</ContactDetails>
-          <ContactDetails>W4 Suite 122</ContactDetails>
-          <ContactDetails>Harahan, LA 70123</ContactDetails>
-          <ContactDetails>
-            Phone:{" "}
-            <FooterClickablePhoneNumber href="tel:504-736-0800">
-              504-736-0800
-            </FooterClickablePhoneNumber>
-          </ContactDetails>
-          <ContactDetails>
-            Fax:{" "}
-            <FooterClickablePhoneNumber href="tel:504-734-2640">
-              504-734-2640
-            </FooterClickablePhoneNumber>
-          </ContactDetails>
-        </ContactItem>
-        <ContactItem>
           <ContactTitle>HEADQUARTERS</ContactTitle>
           <ContactDetails>169 Western Highway</ContactDetails>
           <ContactDetails>West Nyack, NY 10994</ContactDetails>
@@ -47,6 +29,24 @@ const Footer = () => {
             <FooterClickableLink href="mailto:info@roofline.com">
               info@roofline.com
             </FooterClickableLink>
+          </ContactDetails>
+        </ContactItem>
+        <ContactItem>
+          <ContactTitle>LOUISIANA OFFICE</ContactTitle>
+          <ContactDetails>5600 Jefferson Highway</ContactDetails>
+          <ContactDetails>W4 Suite 122</ContactDetails>
+          <ContactDetails>Harahan, LA 70123</ContactDetails>
+          <ContactDetails>
+            Phone:{" "}
+            <FooterClickablePhoneNumber href="tel:504-736-0800">
+              504-736-0800
+            </FooterClickablePhoneNumber>
+          </ContactDetails>
+          <ContactDetails>
+            Fax:{" "}
+            <FooterClickablePhoneNumber href="tel:504-734-2640">
+              504-734-2640
+            </FooterClickablePhoneNumber>
           </ContactDetails>
         </ContactItem>
         <ContactItem>
