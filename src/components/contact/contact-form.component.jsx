@@ -58,10 +58,14 @@ const ContactForm = () => {
     <PageContainer id="contact">
       <Title>Contact Form</Title>
       <ContactContainer>
-        <VideoBackground autoPlay muted loop>
-          <source src="assets/dronevid.mp4" type="video/mp4" />
-          {/* Add more <source> elements for different video formats */}
-        </VideoBackground>
+        <VideoBackground
+          autoPlay
+          muted
+          loop
+          src="assets/dronevid.mp4"
+          type="video/mp4"
+        />
+        {/* Add more <source> elements for different video formats */}
         <div style={{ position: "relative" }}>
           {submissionStatus === "success" ? (
             <SubmittedFormContainer>

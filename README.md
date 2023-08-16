@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Hayden Building Maintenance - Company Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Logo](/path/to/logo.png) <!-- Add your logo here -->
 
-## Available Scripts
+A professional website built for showcasing the portfolio, enabling users to get in touch, and providing general information about Hayden Building Maintenance.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The **Hayden Building Maintenance - Company Website** is a static web application designed to present the company's portfolio, offer contact options, and provide essential details about the company's services. The website is built using React.js, Express, and various technologies to ensure responsiveness across all devices.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project locally, follow these steps:
 
-### `npm run build`
+1. Clone the repository: `git clone https://github.com/your-username/hayden-building-website.git`
+2. Navigate to the project directory: `cd hayden-building-website`
+3. Install dependencies: `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Start the development server: `npm start`
+2. Open your web browser and go to: `http://localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The website consists of static elements, a portfolio section, and a contact form. It is highly responsive and optimized for various device sizes.
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React.js: Building the user interface and components.
+- Express: Backend server for handling form submissions.
+- axios: Making HTTP requests to the server.
+- dotenv: Managing environment variables.
+- nodemailer: Sending emails via the contact form.
+- styled components: Styling the application using CSS-in-JS.
+- nodemon: Auto-reloading the server during development.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contributions and suggestions are welcome! If you have any ideas to enhance this project, leave comments or open issues in the repository. Feel free to fork the repository and create a pull request.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contact
 
-## Learn More
+For questions, suggestions, or inquiries, you can reach out through LinkedIn or email:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile/)
+- Email: ocronk10@gmail.com
