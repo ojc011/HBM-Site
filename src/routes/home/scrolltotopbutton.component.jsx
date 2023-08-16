@@ -40,7 +40,7 @@ const ButtonContainer = styled.div`
   padding: 10px;
   border-radius: 25%;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 9998;
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
 
