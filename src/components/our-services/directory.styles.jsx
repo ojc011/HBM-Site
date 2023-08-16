@@ -5,5 +5,4 @@ export const DirectoryContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 7.5px;
 `;

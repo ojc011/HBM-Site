@@ -99,10 +99,10 @@ export const DirectoryItemContainer = styled.div`
   ${mediumDeviceQuery} {
     min-width: 50%; /* Adjust width on medium devices */
     height: 200px; /* Adjust height on medium devices */
-    margin: 0 7.5px 15px;
+    margin: 0 3.75px 7.5px;
   }
 
   ${largeDeviceQuery} {
-    margin: 0 7.5px 15px;
+    margin: 0 3.75px 7.5px;
   }
 `;

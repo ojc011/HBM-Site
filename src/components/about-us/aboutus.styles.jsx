@@ -6,9 +6,8 @@ const largeDeviceQuery = "@media (min-width: 769px)";
 
 export const MPContainer = styled.div`
   border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #ca2236;
+  margin-bottom: 7.5px;
+  border: 5px solid #ca2236;
   color: #ffffff;
   font-family: Arial, sans-serif;
 `;
@@ -29,7 +28,7 @@ export const LeftContainer = styled.div`
 export const DescriptionContainer = styled.div`
   margin-bottom: 20px;
   text-align: center;
-  font-size: 18px; 
+  font-size: 18px;
   margin-bottom: 25px;
   padding: 20px;
   transition: transform 0.3s ease-in-out;
