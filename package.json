@@ -3,14 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "css": "^3.0.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "nodemailer": "^6.9.4",
@@ -19,19 +17,20 @@
     "react-google-autocomplete": "^2.7.3",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
-    "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-swipeable": "^7.0.1",
     "react-youtube": "^10.1.0",
     "sass": "^1.64.2",
-    "styled-components": "^6.0.7",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^6.0.7"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": "16.14.0"
   },
   "eslintConfig": {
     "extends": [
@@ -50,9 +49,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "file-loader": "^6.2.0",
-    "nodemon": "^3.0.1"
   }
 }
