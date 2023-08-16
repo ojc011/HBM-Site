@@ -5,6 +5,11 @@ import {
   EnlargedImage,
   EnlargedImageWrapper,
   ImageContainer,
+  ServiceDescription,
+  ServiceList,
+  ServiceType,
+  SubServiceItem,
+  SubServiceList,
   Title,
 } from "./slate.styles";
 
@@ -34,7 +39,28 @@ const Slate = () => {
 
   return (
     <>
-      <Title>Flat Commercial Roofing</Title>
+      <Title>Slate Roofing</Title>
+      <ServiceDescription>
+        <ServiceType></ServiceType>
+        <ServiceList>
+          <SubServiceList>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem>
+              Applications:
+              <SubServiceList>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+              </SubServiceList>
+            </SubServiceItem>
+          </SubServiceList>
+        </ServiceList>
+      </ServiceDescription>
+      ;
       <ImageContainer>
         {images.map((filename, index) => (
           <EnlargableImage

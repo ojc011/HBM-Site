@@ -28,8 +28,8 @@ export const LeftContainer = styled.div`
 
 export const DescriptionContainer = styled.div`
   margin-bottom: 20px;
-  text-align: center; /* Center text on large devices */
-  font-size: 18px; /* Increase font size by 2 points on large devices */
+  text-align: center;
+  font-size: 18px; 
   margin-bottom: 25px;
   padding: 20px;
   transition: transform 0.3s ease-in-out;

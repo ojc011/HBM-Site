@@ -5,6 +5,11 @@ import {
   EnlargedImage,
   EnlargedImageWrapper,
   ImageContainer,
+  ServiceDescription,
+  ServiceList,
+  ServiceType,
+  SubServiceItem,
+  SubServiceList,
   Title,
 } from "./sar.styles";
 
@@ -35,6 +40,27 @@ const SteepArchRoofing = () => {
   return (
     <>
       <Title>Steep Architectural Roofing</Title>
+      <ServiceDescription>
+  <ServiceType></ServiceType>
+  <ServiceList>
+    <SubServiceList>
+      <SubServiceItem></SubServiceItem>
+      <SubServiceItem></SubServiceItem>
+      <SubServiceItem></SubServiceItem>
+      <SubServiceItem></SubServiceItem>
+      <SubServiceItem>
+        Applications:
+        <SubServiceList>
+          <SubServiceItem></SubServiceItem>
+          <SubServiceItem></SubServiceItem>
+          <SubServiceItem></SubServiceItem>
+          <SubServiceItem></SubServiceItem>
+        </SubServiceList>
+      </SubServiceItem>
+    </SubServiceList>
+  </ServiceList>
+</ServiceDescription>;
+      ;
       <ImageContainer>
         {images.map((filename, index) => (
           <EnlargableImage

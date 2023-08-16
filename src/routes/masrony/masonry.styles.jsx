@@ -1,5 +1,89 @@
 import styled from "styled-components";
 
+const smallDeviceQuery = "@media (max-width: 480px)";
+const mediumDeviceQuery = "@media (min-width: 481px) and (max-width: 768px)";
+const largeDeviceQuery = "@media (min-width: 769px)";
+
+export const ServiceDescription = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex; /* Add flex display to create a flex container */
+  justify-content: space-between; /* Space items evenly within the container */
+  align-items: center; /* Center items vertically */
+  margin-top: 7.5px;
+
+  ${smallDeviceQuery} {
+    flex-direction: column; /* Stack content on small devices */
+  }
+`;
+
+export const ServiceType = styled.div`
+  flex: 1; /* Take up equal available space */
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ${smallDeviceQuery} {
+    margin-bottom: 10px; /* Add spacing on small devices */
+  }
+
+  ${mediumDeviceQuery} {
+    margin-right: 10px; /* Adjust margin on medium devices */
+  }
+
+  ${largeDeviceQuery} {
+    margin-right: 10px; /* Adjust margin on large devices */
+  }
+`;
+
+export const ServiceList = styled.div`
+  flex: 1; /* Take up equal available space */
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+  ${smallDeviceQuery} {
+    margin-top: 5px; /* Add spacing on small devices */
+  }
+
+  ${mediumDeviceQuery} {
+    font-size: 22px;
+  }
+
+  ${largeDeviceQuery} {
+    margin-top: 0; /* Reset margin on large devices */
+    font-size: 22px;
+  }
+`;
+
+export const SubServiceList = styled.ul`
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 10px; /* Add spacing between ServiceList and SubServiceList */
+  text-align: center; /* Center the list items horizontally */
+
+  ${smallDeviceQuery} {
+    padding-left: 0; /* Remove padding on small devices */
+    margin-top: 5px; /* Adjust spacing on small devices */
+  }
+`;
+
+export const SubServiceItem = styled.li`
+  margin-bottom: 5px;
+`;
+
 export const Title = styled.h1`
   font-size: 24px;
   font-weight: bold;
@@ -9,7 +93,7 @@ export const Title = styled.h1`
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
   border-radius: 5px;
-  max-width: 75%;
+  max-width: 90%;
   margin: 0 auto; /* Center the title horizontally */
 `;
 

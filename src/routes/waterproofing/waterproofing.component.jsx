@@ -6,6 +6,11 @@ import {
   EnlargedImageWrapper,
   ImageContainer,
   Title,
+  ServiceDescription,
+  ServiceList,
+  ServiceType,
+  SubServiceItem,
+  SubServiceList,
 } from "./waterproofing.styles";
 
 const Waterproofing = () => {
@@ -34,7 +39,27 @@ const Waterproofing = () => {
 
   return (
     <>
-      <Title>Flat Commercial Roofing</Title>
+      <Title>Waterproofing</Title>
+      <ServiceDescription>
+        <ServiceType></ServiceType>
+        <ServiceList>
+          <SubServiceList>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem>
+              Applications:
+              <SubServiceList>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+              </SubServiceList>
+            </SubServiceItem>
+          </SubServiceList>
+        </ServiceList>
+      </ServiceDescription>
       <ImageContainer>
         {images.map((filename, index) => (
           <EnlargableImage
