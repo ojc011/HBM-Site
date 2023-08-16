@@ -21,13 +21,17 @@ const MobileLogoContainer = styled.div`
 `;
 
 const MobileLogoImageStyled = styled.img`
-  width: 50%;
+  width: 75%;
   height: 90%;
   object-fit: contain; /* Ensure the image fits inside the container without stretching */
 `;
 
 const MobileLogo = () => {
   const [targetSection, setTargetSection] = useState(null);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   useEffect(() => {
     if (targetSection) {
@@ -47,15 +51,14 @@ const MobileLogo = () => {
     }
   }, [targetSection]);
 
-  // Function to handle navigation link clicks
-  const handleNavLinkClick = (sectionId) => {
-    // Set the target section for scrolling
-    setTargetSection(sectionId);
-  };
-
   return (
     <Link to="/">
-      <MobileLogoContainer to="/" onClick={() => handleNavLinkClick("home")}>
+      <MobileLogoContainer
+        to="/"
+        onClick={() => {
+          scrollToTop();
+        }}
+      >
         <MobileLogoImageStyled
           src="/assets/haydenlogohighres.png"
           alt="Mobile Logo"

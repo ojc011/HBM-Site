@@ -19,6 +19,10 @@ const Navigation = () => {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [targetSection, setTargetSection] = useState(null);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleMobileMenuToggle = () => {
     if (isMobileMenuOpen) {
       // Closing the menu
@@ -79,7 +83,12 @@ const Navigation = () => {
   return (
     <React.Fragment>
       <NavigationContainer>
-        <LogoContainer to="/" onClick={() => handleNavLinkClick("home")}>
+        <LogoContainer
+          to="/"
+          onClick={() => {
+            scrollToTop();
+          }}
+        >
           {/* Use a styled <a> tag for the logo */}
           <StyledLogo
             alt=""
@@ -93,7 +102,9 @@ const Navigation = () => {
             to="/"
             smooth={true}
             duration={500}
-            onClick={() => handleNavLinkClick("services")}
+            onClick={() => {
+              scrollToTop();
+            }}
           >
             Our Services
           </NavLink>
@@ -157,7 +168,10 @@ const Navigation = () => {
             to="/"
             smooth={true}
             duration={500}
-            onClick={() => handleMobileMenuLinkClick("home")}
+            onClick={() => {
+              scrollToTop();
+              handleMobileMenuLinkClick("");
+            }}
           >
             <MobileMenuItem>Home</MobileMenuItem>
           </Link>
@@ -166,7 +180,10 @@ const Navigation = () => {
             to="/"
             smooth={true}
             duration={500}
-            onClick={() => handleMobileMenuLinkClick("services")}
+            onClick={() => {
+              scrollToTop();
+              handleMobileMenuLinkClick("");
+            }}
           >
             <MobileMenuItem>Our Services</MobileMenuItem>
           </Link>

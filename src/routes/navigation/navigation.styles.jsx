@@ -12,7 +12,7 @@ export const NavigationContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 7.5px;
   position: sticky;
   top: 0;
   background-color: #ffffff;
