@@ -141,15 +141,5 @@ export const SubmitButtonContainer = styled.div`
 export const SubmittedFormContainer = styled.div`
   color: #ffff;
   text-align: center;
-  ${mediumDeviceQuery} {
-    width: 66%; /* Take up 66% width on medium devices */
-  }
-
-  ${largeDeviceQuery} {
-    width: 33%; /* Take up 33% width on large devices */
-  }
-
-  ${smallDeviceQuery} {
-    width: 100%; /* Take up 100% width on small or mobile devices */
-  }
+  width: 100%;
 `;

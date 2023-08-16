@@ -93,14 +93,6 @@ const Navigation = () => {
             to="/"
             smooth={true}
             duration={500}
-            onClick={() => handleNavLinkClick("home")}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/"
-            smooth={true}
-            duration={500}
             onClick={() => handleNavLinkClick("services")}
           >
             Our Services
@@ -152,7 +144,7 @@ const Navigation = () => {
         <MobileMenu
           style={{
             opacity: isMobileMenuVisible ? 1 : 0,
-            transition: "opacity 1.5s ease-in-out",
+            transition: "opacity 1s ease-in-out",
           }}
         >
           <CloseButton onClick={handleMobileMenuClose}>×</CloseButton>
