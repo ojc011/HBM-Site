@@ -5,6 +5,8 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require('path');
 
+const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3000/api/send-email";
+
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -12,12 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors()); // Enable CORS for all routes
 
-// Serve static files from the build directory (output of React build)
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the video file
 app.get('/dronevid.mp4', (req, res) => {
@@ -30,9 +28,9 @@ app.get('/dronevid.mp4', (req, res) => {
   res.sendFile(videoPath);
 });
 
-// Handle React's index.html for any route
+// Handle React's index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Configure Nodemailer
@@ -45,7 +43,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // API endpoint to send email
-app.post("/api/send-email", (req, res) => {
+app.post(apiUrl, (req, res) => {
   const {
     name,
     userEmail,

@@ -16,6 +16,9 @@ import {
   SubmittedFormContainer,
 } from "./contact-form.styles";
 
+const apiUrl =
+  process.env.REACT_APP_API_URL || "http://localhost:3000/api/send-email";
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -41,10 +44,10 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:3001/api/send-email",
-        { ...formData, destinationEmail: process.env.EMAIL_ACC }
-      );
+      const response = await axios.post(apiUrl, {
+        ...formData,
+        destinationEmail: process.env.EMAIL_ACC,
+      });
       console.log(response.data.message);
       setSubmissionStatus("success"); // Set submission status to "success"
     } catch (error) {
