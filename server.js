@@ -5,8 +5,6 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require('path');
 
-const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3000/api/send-email";
-
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -43,7 +41,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // API endpoint to send email
-app.post(apiUrl, (req, res) => {
+app.post("http://localhost:3001/api/send-email", (req, res) => {
   const {
     name,
     userEmail,
