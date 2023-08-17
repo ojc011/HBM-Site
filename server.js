@@ -12,8 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors()); // Enable CORS for all routes
 
-// Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the build directory (output of React build)
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // Serve the video file
 app.get('/dronevid.mp4', (req, res) => {
@@ -26,9 +30,9 @@ app.get('/dronevid.mp4', (req, res) => {
   res.sendFile(videoPath);
 });
 
-// Handle React's index.html
+// Handle React's index.html for any route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Configure Nodemailer
