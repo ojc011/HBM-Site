@@ -41,7 +41,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // API endpoint to send email
-app.post("http://localhost:3001/api/send-email", (req, res) => {
+app.post("/api/send-email", (req, res) => {
   const {
     name,
     userEmail,
