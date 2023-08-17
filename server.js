@@ -28,7 +28,7 @@ app.get('/dronevid.mp4', (req, res) => {
 
 // Handle React's index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'public', 'index.html'));
 });
 
 // Configure Nodemailer
