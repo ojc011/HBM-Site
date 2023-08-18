@@ -1,135 +1,78 @@
-// navigation.styles.js
-
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import MobileLogo from "./mobilelogo";
 
 export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
-  max-width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 7.5px;
   position: sticky;
   top: 0;
-  background-color: #ffffff;
+  background-color: transparent;
   z-index: 999;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  opacity: 0.98;
 `;
 
-export const LogoContainer = styled(Link)`
-  margin-left: 75px;
-  height: auto;
-  width: auto;
-  align-items: center;
-  padding: 2px;
-  display: block;
-  width: auto; /* Make the mobile logo container full width on small and medium devices */
-  height: 70px; /* Allow the height to adjust based on the logo size */
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
+export const LogoContainer = styled(Link)``;
 
 export const StyledLogo = styled.img`
-  display: flex;
+  display: block;
   width: auto;
-  height: 100%;
-  object-fit: contain; /* Ensure the image fits inside the container without stretching */
-  @media (max-width: 900px) {
-    display: block;
-  }
-`;
-
-export const NavLinks = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-weight: bold;
-  @media (max-width: 900px) {
-    display: none;
-  }
-`;
-
-export const NavLink = styled(Link)`
-  padding: 10px 15px;
-  cursor: pointer;
-  white-space: nowrap;
+  height: 65px;
+  object-fit: contain;
 `;
 
 export const MobileMenuIcon = styled.div`
-  margin-right: 75px;
   width: 50px;
   height: 50px;
-  display: none;
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
-
-  @media (max-width: 900px) {
-    display: flex;
-  }
-`;
-
-export const MobileMenuItem = styled.div`
-  padding: 10px 15px;
-  width: 100%;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-
-  p {
-    font-size: 11px;
-  }
-`;
-
-export const MobileLogoAboveLinks = styled.img`
-  width: 75px; /* Set the width of the logo */
-  height: auto;
-  margin-bottom: 10px; /* Add some spacing below the logo */
+  justify-content: center;
 `;
 
 export const MobileMenu = styled.div`
-  position: fixed;
+  position: fixed; /* Change from absolute to fixed */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  padding: 20px;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+`;
 
-  ${MobileMenuItem}:last-child {
-    border-bottom: none;
+export const MobileMenuItem = styled(Link)`
+  margin: 10px 0;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  p {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
   }
+`;
 
-  @media (max-width: 900px) {
-    display: flex;
-  }
+export const MobileLogoAboveLinks = styled.img`
+  margin-bottom: 30px;
+  width: 150px;
+  height: auto;
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
-  font-size: 60px;
+  font-size: 2rem;
+  color: white;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 `;
-
-export default MobileLogo;

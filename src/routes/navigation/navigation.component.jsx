@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link, Outlet } from "react-router-dom";
-import MobileLogo from "./mobilelogo";
+import React, { useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import {
   NavigationContainer,
-  NavLinks,
-  NavLink,
   LogoContainer,
   StyledLogo,
   MobileMenuIcon,
@@ -15,227 +12,101 @@ import {
 } from "./navigation.styles";
 
 const Navigation = () => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
-  const [targetSection, setTargetSection] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
+
+  const handleMobileMenuToggle = () => {
+    if (!isMobileMenuOpen) {
+      setIsMobileMenuOpen(true);
+      setTimeout(() => {
+        setIsMobileMenuVisible(true);
+      }, 1);
+    } else {
+      setIsMobileMenuVisible(false);
+      setTimeout(() => {
+        setIsMobileMenuOpen(false);
+      }, 300);
+    }
+  };
+
+  const handleMobileMenuClose = () => {
+    setIsMobileMenuVisible(false);
+    setTimeout(() => {
+      setIsMobileMenuOpen(false);
+    }, 300);
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleMobileMenuToggle = () => {
-    if (isMobileMenuOpen) {
-      // Closing the menu
-      setMobileMenuVisible(false);
-      setTimeout(() => {
-        setMobileMenuOpen(false);
-      }, 1500);
-    } else {
-      // Opening the menu
-      setMobileMenuOpen(true);
-      setTimeout(() => {
-        setMobileMenuVisible(true); // Delay visibility for the transition
-      }, 50); // Delay the appearance of the menu for the transition
+  const handleNavLinkClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      handleMobileMenuClose();
     }
   };
 
-  const handleMobileMenuClose = () => {
-    // Closing the menu
-    setMobileMenuVisible(false);
-    setTimeout(() => {
-      setMobileMenuOpen(false);
-    }, 1500);
-  };
+  const location = useLocation();
+  let burgerIconSrc = "/assets/whiteburger.png"; // default icon
 
-  const handleMobileMenuLinkClick = (sectionId) => {
-    // Set the target section for scrolling
-    setTargetSection(sectionId);
-
-    // Handle link clicks and close the menu
-    handleMobileMenuClose();
-  };
-
-  // Use the targetSection state variable to scroll to the section after navigating to "/"
-  useEffect(() => {
-    if (targetSection) {
-      const scrollToSection = () => {
-        const element = document.getElementById(targetSection);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      };
-      // Delay the scroll to the section after a short interval
-      const scrollTimeout = setTimeout(() => {
-        scrollToSection();
-        // Reset the target section to null after scrolling
-        setTargetSection(null);
-      }, 500); // Adjust the delay as needed
-      return () => clearTimeout(scrollTimeout);
-    }
-  }, [targetSection]);
-
-  // Function to handle navigation link clicks
-  const handleNavLinkClick = (sectionId) => {
-    // Set the target section for scrolling
-    setTargetSection(sectionId);
-  };
+  if (location.pathname.includes("category/1")) {
+    burgerIconSrc = "/assets/burger.png";
+  } else if (location.pathname.includes("category/2")) {
+    burgerIconSrc = "/assets/burger.png";
+  } else if (location.pathname.includes("category/3")) {
+    burgerIconSrc = "/assets/burger.png";
+  } else if (location.pathname.includes("category/4")) {
+    burgerIconSrc = "/assets/burger.png";
+  } else if (location.pathname.includes("category/5")) {
+    burgerIconSrc = "/assets/burger.png";
+  } else if (location.pathname.includes("category/6")) {
+    burgerIconSrc = "/assets/burger.png";
+  }
 
   return (
     <React.Fragment>
       <NavigationContainer>
-        <LogoContainer
-          to="/"
-          onClick={() => {
-            scrollToTop();
-          }}
-        >
-          {/* Use a styled <a> tag for the logo */}
-          <StyledLogo
-            alt=""
-            className="logo"
-            src="/assets/haydenlogohighres.png"
-          />
+        <LogoContainer to="/" onClick={scrollToTop}>
+          <StyledLogo alt="Logo" src="/assets/logo1.png" />
         </LogoContainer>
-        <NavLinks>
-          {/* Links to sections with similar behavior as mobile menu links */}
-          <NavLink
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => {
-              scrollToTop();
-            }}
-          >
-            Our Services
-          </NavLink>
-          <NavLink
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleNavLinkClick("aboutus")}
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleNavLinkClick("contact")}
-          >
-            Contact Us
-          </NavLink>
-          <NavLink
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleNavLinkClick("portfolio")}
-          >
-            Portfolio
-          </NavLink>
-          <NavLink
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleNavLinkClick("safety")}
-          >
-            Safety
-          </NavLink>
-          {/* Add any other NavLinks here */}
-        </NavLinks>
-        <MobileLogo />
         <MobileMenuIcon onClick={handleMobileMenuToggle}>
           <img
-            src="/assets/burger.png"
+            src={burgerIconSrc}
             alt="MobileMenuIcon"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "85%", height: "85%" }}
           />
         </MobileMenuIcon>
       </NavigationContainer>
       {isMobileMenuOpen && (
-        <MobileMenu
-          style={{
-            opacity: isMobileMenuVisible ? 1 : 0,
-            transition: "opacity 1s ease-in-out",
-          }}
-        >
+        <MobileMenu style={{ opacity: isMobileMenuVisible ? 1 : 0 }}>
           <CloseButton onClick={handleMobileMenuClose}>×</CloseButton>
           <MobileLogoAboveLinks
             src="/assets/logo1.png"
             alt="Mobile Logo Above Links"
           />
-          {/* Home link */}
-          <Link
+          <MobileMenuItem to="/" onClick={() => handleNavLinkClick("services")}>
+            Our Services
+          </MobileMenuItem>
+          <MobileMenuItem to="/" onClick={() => handleNavLinkClick("aboutus")}>
+            About Us
+          </MobileMenuItem>
+          <MobileMenuItem to="/" onClick={() => handleNavLinkClick("contact")}>
+            Contact Us
+          </MobileMenuItem>
+          <MobileMenuItem
             to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => {
-              scrollToTop();
-              handleMobileMenuLinkClick("");
-            }}
+            onClick={() => handleNavLinkClick("portfolio")}
           >
-            <MobileMenuItem>Home</MobileMenuItem>
-          </Link>
-          {/* Our Services link */}
-          <Link
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => {
-              scrollToTop();
-              handleMobileMenuLinkClick("");
-            }}
-          >
-            <MobileMenuItem>Our Services</MobileMenuItem>
-          </Link>
-          {/* About Us link */}
-          <Link
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleMobileMenuLinkClick("aboutus")}
-          >
-            <MobileMenuItem>About Us</MobileMenuItem>
-          </Link>
-          {/* Contact Us link */}
-          <Link
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleMobileMenuLinkClick("contact")}
-          >
-            <MobileMenuItem>Contact Us</MobileMenuItem>
-          </Link>
-          {/* Portfolio link */}
-          <Link
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleMobileMenuLinkClick("portfolio")}
-          >
-            <MobileMenuItem>Portfolio</MobileMenuItem>
-          </Link>
-          {/* Safety link */}
-          <Link
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleMobileMenuLinkClick("safety")}
-          >
-            <MobileMenuItem>Safety</MobileMenuItem>
-          </Link>
-          {/* Copyright */}
-          <Link
-            to="/"
-            smooth="true" // Use strings for non-boolean attributes
-            duration={500}
-            onClick={() => handleMobileMenuLinkClick("copyright")}
-          >
-            <br />
-            <MobileMenuItem>
-              <p>&copy; 2023 Hayden Building Maintenance Inc.</p>
-            </MobileMenuItem>
-          </Link>
-          {/* Add any other MobileMenu links here */}
+            Portfolio
+          </MobileMenuItem>
+          <MobileMenuItem to="/" onClick={() => handleNavLinkClick("safety")}>
+            Safety
+          </MobileMenuItem>
+          <MobileMenuItem to="/" onClick={scrollToTop}>
+            <p>&copy; 2023 Hayden Building Maintenance Inc.</p>
+          </MobileMenuItem>
         </MobileMenu>
       )}
       <Outlet />
