@@ -40,21 +40,18 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const apiUrl = "/api/send-email";
     try {
-      const response = await axios.post(
-        "http://localhost:3001/api/send-email",
-        {
-          ...formData,
-          destinationEmail: process.env.EMAIL_ACC,
-        }
-      );
+      const response = await axios.post(apiUrl, {
+        ...formData,
+        destinationEmail: process.env.EMAIL_ACC,
+      });
       console.log(response.data.message);
-      setSubmissionStatus("success"); // Set submission status to "success"
+      setSubmissionStatus("success");
     } catch (error) {
       console.error("Error sending email:", error);
-      setSubmissionStatus("error"); // Set submission status to "error"
+      setSubmissionStatus("error");
     }
-    console.log(formData);
   };
 
   return (
