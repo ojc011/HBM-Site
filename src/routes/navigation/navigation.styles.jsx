@@ -20,6 +20,12 @@ export const StyledLogo = styled.img`
   width: auto;
   height: 65px;
   object-fit: contain;
+
+  @media (max-width: 768px) {
+    // Assuming 768px is the breakpoint for small devices
+    width: 50px;
+    height: auto;
+  }
 `;
 
 export const MobileMenuIcon = styled.div`
@@ -28,6 +34,11 @@ export const MobileMenuIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    // Assuming 768px is the breakpoint for small devices
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const MobileMenu = styled.div`
