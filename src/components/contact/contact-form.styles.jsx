@@ -67,7 +67,12 @@ export const VideoBackground = styled.video`
   width: 100%;
   height: 100%;
   z-index: -1;
-  object-fit: ${props => (props.active ? "contain" : "cover")};
+  object-fit: cover;
+
+  /* Disable fullscreen on mobile */
+  @media (max-width: 767px) {
+    pointer-events: none;
+  }
 `;
 
 export const Form = styled.form`
