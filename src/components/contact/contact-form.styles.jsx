@@ -23,6 +23,7 @@ export const PageContainer = styled.div`
   position: relative;
   margin-bottom: 7.5px;
   border-radius: 5px;
+  overflow: hidden; /* Add this line to hide any overflow content */
 
   @media (min-width: 768px) {
     ${mediumDeviceQuery} {
@@ -61,7 +62,7 @@ export const ContactContainer = styled.div`
 
 export const VideoBackground = styled.video`
   border-radius: 5px;
-  position: absolute;
+  position: fixed; /* Change position to fixed */
   top: 0;
   left: 0;
   width: 100%;
@@ -147,4 +148,6 @@ export const SubmittedFormContainer = styled.div`
   color: #ffff;
   text-align: center;
   width: 100%;
+  position: relative; /* Add position property */
+  z-index: 1; /* Increase z-index to make it appear above the video background */
 `;
