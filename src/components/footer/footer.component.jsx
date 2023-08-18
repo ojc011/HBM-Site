@@ -50,7 +50,7 @@ const Footer = () => {
           </ContactDetails>
         </ContactItem>
         <ContactItem>
-          <ContactTitle>Florida Office</ContactTitle>
+          <ContactTitle>FLORIDA OFFICE</ContactTitle>
           <ContactDetails>3259 SW 14th Place</ContactDetails>
           <ContactDetails>Boynton Beach, FL 33426</ContactDetails>
           <ContactDetails>

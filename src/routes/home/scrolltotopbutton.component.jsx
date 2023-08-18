@@ -25,8 +25,11 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
-    <ButtonContainer onClick={scrollToTop} isVisible={isVisible}>
-      <FaArrowUp />
+    <ButtonContainer
+      onClick={scrollToTop}
+      style={{ opacity: isVisible ? 1 : 0 }}
+    >
+      <FaArrowUpIcon />
     </ButtonContainer>
   );
 };
@@ -35,18 +38,25 @@ const ButtonContainer = styled.div`
   position: fixed;
   bottom: 20px;
   left: 20px;
+  width: 42px;
+  height: 42px;
   background-color: #ccc;
-  color: black;
-  padding: 10px;
-  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 9998;
-  opacity: ${(props) => (props.isVisible ? 1 : 0)};
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
   &:hover {
     background-color: #aaa;
   }
+`;
+
+const FaArrowUpIcon = styled(FaArrowUp)`
+  font-size: 24px;
+  color: black;
 `;
 
 export default ScrollToTopButton;

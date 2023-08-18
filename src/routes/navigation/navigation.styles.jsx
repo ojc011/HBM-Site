@@ -85,6 +85,10 @@ export const MobileMenuItem = styled.div`
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+
+  p {
+    font-size: 11px;
+  }
 `;
 
 export const MobileLogoAboveLinks = styled.img`

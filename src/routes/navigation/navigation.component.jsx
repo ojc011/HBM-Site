@@ -100,7 +100,7 @@ const Navigation = () => {
           {/* Links to sections with similar behavior as mobile menu links */}
           <NavLink
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => {
               scrollToTop();
@@ -110,7 +110,7 @@ const Navigation = () => {
           </NavLink>
           <NavLink
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleNavLinkClick("aboutus")}
           >
@@ -118,7 +118,7 @@ const Navigation = () => {
           </NavLink>
           <NavLink
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleNavLinkClick("contact")}
           >
@@ -126,7 +126,7 @@ const Navigation = () => {
           </NavLink>
           <NavLink
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleNavLinkClick("portfolio")}
           >
@@ -134,7 +134,7 @@ const Navigation = () => {
           </NavLink>
           <NavLink
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleNavLinkClick("safety")}
           >
@@ -166,7 +166,7 @@ const Navigation = () => {
           {/* Home link */}
           <Link
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => {
               scrollToTop();
@@ -178,7 +178,7 @@ const Navigation = () => {
           {/* Our Services link */}
           <Link
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => {
               scrollToTop();
@@ -190,7 +190,7 @@ const Navigation = () => {
           {/* About Us link */}
           <Link
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleMobileMenuLinkClick("aboutus")}
           >
@@ -199,7 +199,7 @@ const Navigation = () => {
           {/* Contact Us link */}
           <Link
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleMobileMenuLinkClick("contact")}
           >
@@ -208,7 +208,7 @@ const Navigation = () => {
           {/* Portfolio link */}
           <Link
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleMobileMenuLinkClick("portfolio")}
           >
@@ -217,11 +217,23 @@ const Navigation = () => {
           {/* Safety link */}
           <Link
             to="/"
-            smooth={true}
+            smooth="true" // Use strings for non-boolean attributes
             duration={500}
             onClick={() => handleMobileMenuLinkClick("safety")}
           >
             <MobileMenuItem>Safety</MobileMenuItem>
+          </Link>
+          {/* Copyright */}
+          <Link
+            to="/"
+            smooth="true" // Use strings for non-boolean attributes
+            duration={500}
+            onClick={() => handleMobileMenuLinkClick("copyright")}
+          >
+            <br />
+            <MobileMenuItem>
+              <p>&copy; 2023 Hayden Building Maintenance Inc.</p>
+            </MobileMenuItem>
           </Link>
           {/* Add any other MobileMenu links here */}
         </MobileMenu>
