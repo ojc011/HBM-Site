@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const TestimonialsContainer = styled.div`
+  opacity: 0.98;
   background-color: #f3f3f3;
   padding: 20px;
   border: 2px solid #000000;
@@ -22,6 +23,7 @@ export const TestimonialsSlider = styled.div`
 `;
 
 export const TestimonialContentContainer = styled.div`
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +31,7 @@ export const TestimonialContentContainer = styled.div`
 `;
 
 export const TestimonialCard = styled.div`
+  opacity: 1;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

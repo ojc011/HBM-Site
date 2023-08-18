@@ -19,7 +19,7 @@ export const NavigationContainer = styled.div`
   z-index: 999;
   border: 2px solid #000000;
   border-radius: 5px;
-  opacity: 0.85;
+  opacity: 0.98;
 `;
 
 export const LogoContainer = styled(Link)`
