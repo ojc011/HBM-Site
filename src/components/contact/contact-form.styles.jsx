@@ -66,9 +66,8 @@ export const VideoBackground = styled.video`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   z-index: -1;
-  pointer-events: none; /* This line prevents interaction with the video */
+  object-fit: ${props => (props.active ? "contain" : "cover")};
 `;
 
 export const Form = styled.form`

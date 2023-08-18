@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
   Title,
@@ -17,6 +17,16 @@ import {
 } from "./contact-form.styles";
 
 const ContactForm = () => {
+  const [contactFormActive, setContactFormActive] = useState(true);
+
+  useEffect(() => {
+    setContactFormActive(true);
+
+    return () => {
+      setContactFormActive(false);
+    };
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     userEmail: "",
@@ -64,6 +74,7 @@ const ContactForm = () => {
           loop
           src="assets/dronevid.mp4"
           type="video/mp4"
+          active={contactFormActive}
         />
         {/* Add more <source> elements for different video formats */}
         <div style={{ position: "relative" }}>
