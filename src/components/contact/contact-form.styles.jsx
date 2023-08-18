@@ -68,6 +68,7 @@ export const VideoBackground = styled.video`
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  pointer-events: none; /* This line prevents interaction with the video */
 `;
 
 export const Form = styled.form`
