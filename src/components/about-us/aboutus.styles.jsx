@@ -64,7 +64,7 @@ export const CompanyPicContainer = styled.div`
 
 export const CompanyPic = styled.div`
   img {
-    opacity: 1;
+    opacity: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 4px;

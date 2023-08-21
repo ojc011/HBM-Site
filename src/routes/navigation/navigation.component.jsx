@@ -86,7 +86,21 @@ const Navigation = () => {
             src="/assets/logo1.png"
             alt="Mobile Logo Above Links"
           />
-          <MobileMenuItem to="/" onClick={() => handleNavLinkClick("services")}>
+          <MobileMenuItem
+            to="/"
+            onClick={() => {
+              scrollToTop();
+              handleMobileMenuClose();
+            }}
+          >
+            Home
+          </MobileMenuItem>
+          <MobileMenuItem
+            to="/"
+            onClick={() => {
+              handleNavLinkClick("services");
+            }}
+          >
             Our Services
           </MobileMenuItem>
           <MobileMenuItem to="/" onClick={() => handleNavLinkClick("aboutus")}>

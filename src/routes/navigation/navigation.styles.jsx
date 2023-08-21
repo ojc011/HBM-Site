@@ -11,6 +11,7 @@ export const NavigationContainer = styled.div`
   top: 0;
   background-color: transparent;
   z-index: 999;
+  margin-bottom: 7.5px;
 `;
 
 export const LogoContainer = styled(Link)``;
@@ -87,3 +88,4 @@ export const CloseButton = styled.button`
     outline: none;
   }
 `;
+

@@ -61,7 +61,6 @@ export const ContactContainer = styled.div`
 `;
 
 export const VideoBackground = styled.video`
-  border-radius: 5px;
   position: fixed; /* Change position to fixed */
   top: 0;
   left: 0;
