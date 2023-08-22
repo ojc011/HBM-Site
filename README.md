@@ -1,10 +1,11 @@
 # Hayden Building Maintenance - Company Website
 
-![Project img1](/public/assets/readmeimg1.png)
-![Project img2](/public/assets/readmeimg2.png)
-![Project img3](/public/assets/readmeimg3.png)
-![Project img4](/public/assets/readmeimg4.png)
-
+<div style="display: flex;">
+<img src="/public/assets/readmeimg1.png" alt="Project img1" auto height="225">
+<img src="/public/assets/readmeimg2.png" alt="Project img2" auto height="225">
+<img src="/public/assets/readmeimg3.png" alt="Project img3" auto height="225">
+<img src="/public/assets/readmeimg4.png" alt="Project img4" auto height="225">
+</div>
 
 A professional website built for showcasing the portfolio, enabling users to get in touch, and providing general information about Hayden Building Maintenance.
 
