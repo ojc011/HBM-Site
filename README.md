@@ -1,6 +1,10 @@
 # Hayden Building Maintenance - Company Website
 
-![Project Logo](/path/to/logo.png) <!-- Add your logo here -->
+![Project img1](/public/assets/readmeimg1.png)
+![Project img2](/public/assets/readmeimg2.png)
+![Project img3](/public/assets/readmeimg3.png)
+![Project img4](/public/assets/readmeimg4.png)
+
 
 A professional website built for showcasing the portfolio, enabling users to get in touch, and providing general information about Hayden Building Maintenance.
 
@@ -10,6 +14,7 @@ A professional website built for showcasing the portfolio, enabling users to get
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
+- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
@@ -34,13 +39,26 @@ The website consists of static elements, a portfolio section, and a contact form
 
 ## Technologies
 
-- React.js: Building the user interface and components.
-- Express: Backend server for handling form submissions.
-- axios: Making HTTP requests to the server.
-- dotenv: Managing environment variables.
-- nodemailer: Sending emails via the contact form.
-- styled components: Styling the application using CSS-in-JS.
-- nodemon: Auto-reloading the server during development.
+This project utilizes the following technologies:
+
+- **React.js**: Building the user interface and components.
+- **Express**: Backend server for handling form submissions.
+- **axios**: Making HTTP requests to the server.
+- **dotenv**: Managing environment variables.
+- **nodemailer**: Sending emails via the contact form.
+- **styled components**: Styling the application using CSS-in-JS.
+- **nodemon**: Auto-reloading the server during development.
+- **MongoDB Atlas**: Cloud-based database for storing contact form data.
+- **Heroku**: Deployment platform for hosting the website.
+
+## Deployment
+
+The website is deployed on Heroku, and the MongoDB Atlas database is used to store contact form data in the cloud. The deployment process includes the following steps:
+
+1. Push changes to your GitHub repository.
+2. Set up a Heroku app and connect it to your GitHub repository.
+3. Configure environment variables for MongoDB Atlas and other settings on Heroku.
+4. Deploy the app using Heroku's automatic deployment.
 
 ## Contributing
 
