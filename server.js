@@ -5,24 +5,15 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require('path');
 const mongoose = require('mongoose');
-const HttpProxyAgent = require('http-proxy-agent');
 
 const app = express();
 const port = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactFormDB";
 
-// If running on Heroku and QUOTAGUARDSTATIC_URL exists, use the proxy
-let mongoOptions = {
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-};
-
-if (process.env.QUOTAGUARDSTATIC_URL) {
-    const agent = new HttpProxyAgent(process.env.QUOTAGUARDSTATIC_URL);
-    mongoOptions.agent = agent;
-}
-
-mongoose.connect(MONGODB_URI, mongoOptions);
+});
 
 mongoose.connection.on('connected', () => {
     console.log('Connected to MongoDB');
