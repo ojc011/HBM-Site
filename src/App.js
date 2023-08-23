@@ -5,7 +5,7 @@ import Navigation from "./routes/navigation/navigation.component";
 import Home from "./routes/home/home.component";
 import FlatCommercialRoofing from "./routes/flatcommercialroofing/fcr.component";
 import SteepArchRoofing from "./routes/steeparchroofing/sar";
-import Masonry from "./routes/masrony/masonry.component";
+import Masonry from "./routes/masonry/masonry.component";
 import Slate from "./routes/slate/slate.component";
 import Waterproofing from "./routes/waterproofing/waterproofing.component";
 import Maintenance from "./routes/maintenance/maintenance.component";

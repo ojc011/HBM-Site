@@ -4,97 +4,161 @@ const smallDeviceQuery = "@media (max-width: 480px)";
 const mediumDeviceQuery = "@media (min-width: 481px) and (max-width: 768px)";
 const largeDeviceQuery = "@media (min-width: 769px)";
 
-export const ServiceDescription = styled.div`
+export const DescriptionContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   border-radius: 5px;
-  max-width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.6;
-  display: flex; /* Add flex display to create a flex container */
-  justify-content: space-between; /* Space items evenly within the container */
-  align-items: center; /* Center items vertically */
-  margin-top: 7.5px;
+  width: 33%;
+  position: fixed;
+  height: 100vh;
+  right: 0;
+  overflow-y: auto;
 
   ${smallDeviceQuery} {
-    flex-direction: column; /* Stack content on small devices */
+    width: 50%;
   }
 `;
 
-export const ServiceType = styled.div`
-  flex: 1; /* Take up equal available space */
-  padding: 5px;
+export const OuterImageContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
   align-items: center;
+  width: 66%;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
 
   ${smallDeviceQuery} {
-    margin-bottom: 10px; /* Add spacing on small devices */
-  }
-
-  ${mediumDeviceQuery} {
-    margin-right: 10px; /* Adjust margin on medium devices */
-  }
-
-  ${largeDeviceQuery} {
-    margin-right: 10px; /* Adjust margin on large devices */
+    width: 50%;
   }
 `;
 
-export const ServiceList = styled.div`
-  flex: 1; /* Take up equal available space */
-  padding: 5px;
+export const MainContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-
-  ${smallDeviceQuery} {
-    margin-top: 5px; /* Add spacing on small devices */
-  }
-
-  ${mediumDeviceQuery} {
-    font-size: 22px;
-  }
-
-  ${largeDeviceQuery} {
-    margin-top: 0; /* Reset margin on large devices */
-    font-size: 22px;
-  }
-`;
-
-export const SubServiceList = styled.ul`
-  list-style-type: none;
-  padding-left: 20px;
-  margin-top: 10px; /* Add spacing between ServiceList and SubServiceList */
-  text-align: center; /* Center the list items horizontally */
-
-  ${smallDeviceQuery} {
-    padding-left: 0; /* Remove padding on small devices */
-    margin-top: 5px; /* Adjust spacing on small devices */
-  }
-`;
-
-export const SubServiceItem = styled.li`
-  margin-bottom: 5px;
+  align-items: stretch;
+  height: 100vh;
 `;
 
 export const Title = styled.h1`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   max-width: 90%;
-  margin: 0 auto; /* Center the title horizontally */
+  margin: 0 auto;
+
+  ${smallDeviceQuery} {
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+
+  ${mediumDeviceQuery} {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  ${largeDeviceQuery} {
+    font-size: 22px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+`;
+
+export const ServiceDescription = styled.div`
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  ${smallDeviceQuery} {
+    padding: 5px;
+  }
+
+  ${mediumDeviceQuery} {
+    padding: 15px;
+  }
+
+  ${largeDeviceQuery} {
+    padding: 20px;
+  }
+`;
+
+export const ServiceType = styled.div`
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ${smallDeviceQuery} {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  ${mediumDeviceQuery} {
+    padding: 10px;
+  }
+
+  ${largeDeviceQuery} {
+    padding: 15px;
+  }
+`;
+
+export const ServiceList = styled.div`
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+  ${smallDeviceQuery} {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  ${mediumDeviceQuery} {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  ${largeDeviceQuery} {
+    font-size: 22px;
+    padding: 10px;
+  }
+`;
+
+export const SubServiceList = styled.ul`
+  list-style-type: none;
+  padding-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+
+  ${smallDeviceQuery} {
+    padding-left: 5px;
+    margin-top: 5px;
+  }
+`;
+
+export const SubServiceItem = styled.li`
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  ${smallDeviceQuery} {
+    font-size: 12px;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -102,8 +166,8 @@ export const ImageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  max-width: 75%; /* Adjust the maximum width on large screens */
-  margin: 0 auto; /* Center the container */
+  max-width: 75%;
+  margin: 0 auto;
 `;
 
 export const EnlargableImage = styled.img`
@@ -112,7 +176,7 @@ export const EnlargableImage = styled.img`
   height: auto;
   border: 1px solid black;
   cursor: pointer;
-  margin-bottom: 10px; /* Add vertical spacing between images */
+  margin-bottom: 10px;
 
   &:hover {
     border: 2px solid black;
@@ -143,7 +207,7 @@ export const CloseButton = styled.button`
   right: 10px;
   background: none;
   border: none;
-  font-size: 40px;
+  font-size: 24px;
   color: #ff0000;
   cursor: pointer;
 `;

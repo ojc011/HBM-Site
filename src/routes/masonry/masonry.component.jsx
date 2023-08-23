@@ -13,8 +13,8 @@ import {
   CloseButton,
   MainContainer,
   OuterImageContainer,
-} from "./sar.styles";
-const SteepArchRoofing = () => {
+} from "./masonry.styles";
+const Masonry = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [images, setImages] = useState([]);
 
@@ -156,4 +156,4 @@ const SteepArchRoofing = () => {
   );
 };
 
-export default SteepArchRoofing;
+export default Masonry;
