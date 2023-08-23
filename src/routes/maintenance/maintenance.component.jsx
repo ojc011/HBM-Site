@@ -60,7 +60,6 @@ const Maintenance = () => {
           </SubServiceList>
         </ServiceList>
       </ServiceDescription>
-      ;
       <ImageContainer>
         {images.map((filename, index) => (
           <EnlargableImage

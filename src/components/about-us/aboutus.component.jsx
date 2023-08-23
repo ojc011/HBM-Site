@@ -15,7 +15,8 @@ const MainPage = () => {
       <LeftContainer>
         <DescriptionContainer>
           <h1>
-            HAYDEN BUILDING MAINTENANCE CORPORATION, THE ROOFING SPECIALIST
+            HAYDEN BUILDING MAINTENANCE CORPORATION, THE ROOFING
+            SPECIALIST
           </h1>
           <p>
             Hayden Building Maintenance Corporation, known as HBMC and

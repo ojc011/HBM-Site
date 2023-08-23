@@ -41,26 +41,25 @@ const SteepArchRoofing = () => {
     <>
       <Title>Steep Architectural Roofing</Title>
       <ServiceDescription>
-  <ServiceType></ServiceType>
-  <ServiceList>
-    <SubServiceList>
-      <SubServiceItem></SubServiceItem>
-      <SubServiceItem></SubServiceItem>
-      <SubServiceItem></SubServiceItem>
-      <SubServiceItem></SubServiceItem>
-      <SubServiceItem>
-        Applications:
-        <SubServiceList>
-          <SubServiceItem></SubServiceItem>
-          <SubServiceItem></SubServiceItem>
-          <SubServiceItem></SubServiceItem>
-          <SubServiceItem></SubServiceItem>
-        </SubServiceList>
-      </SubServiceItem>
-    </SubServiceList>
-  </ServiceList>
-</ServiceDescription>;
-      ;
+        <ServiceType></ServiceType>
+        <ServiceList>
+          <SubServiceList>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem></SubServiceItem>
+            <SubServiceItem>
+              Applications:
+              <SubServiceList>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+                <SubServiceItem></SubServiceItem>
+              </SubServiceList>
+            </SubServiceItem>
+          </SubServiceList>
+        </ServiceList>
+      </ServiceDescription>
       <ImageContainer>
         {images.map((filename, index) => (
           <EnlargableImage

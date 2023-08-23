@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from "react";
 import {
-  CloseButton,
-  EnlargableImage,
-  EnlargedImage,
-  EnlargedImageWrapper,
-  ImageContainer,
-  ServiceDescription,
-  ServiceList,
-  ServiceType,
-  SubServiceItem,
-  SubServiceList,
+  DescriptionContainer,
   Title,
+  ServiceDescription,
+  ServiceType,
+  ServiceList,
+  SubServiceList,
+  SubServiceItem,
+  EnlargableImage,
+  EnlargedImageWrapper,
+  EnlargedImage,
+  CloseButton,
+  MainContainer,
+  OuterImageContainer,
 } from "./fcr.styles";
-
 const FlatCommercialRoofing = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    // Simulate loading images
     const loadImages = async () => {
-      // Load image filenames and add to images state
       const imageFilenames = [
         "BJaysGlenOaksNY-min.jpg",
         "DJI_0143-min.JPG",
@@ -90,53 +89,45 @@ const FlatCommercialRoofing = () => {
   };
 
   return (
-    <>
-      <Title>Flat Commercial Roofing</Title>
-      <ServiceDescription>
-        <ServiceType>
-          Hayden Building Maintenance Corp. has been installing quality roofing
-          systems since 1973 in the Tri-state NY area. A recognized leader in
-          the commercial roofing industry, Hayden specializes in turn-key
-          solutions for commercial, institutional, industrial, and residential
-          flat roofing applications of all sizes. The roofing crews are
-          experienced and certified installers trained in a variety of flat roof
-          products and applications. The professionals at Hayden have the
-          experience and knowledge to handle any project, regardless of size or
-          complexity.
-          <br />
-          <br />
-          Hayden specializes in personal attention and exceptional service for
-          all aspects of your project. Our management team is fully engaged from
-          the initial contact to final inspection to ensure complete
-          satisfaction. The professionals at Hayden can help prolong the life of
-          your roof and try to avoid a roof replacement with planned repairs and
-          maintenance. Infra-red scans can help pinpoint leaks on a roof in a
-          specific area.
-          <br />
-        </ServiceType>
-        <ServiceList>
-          Hayden offers the following services:
-          <SubServiceList>
-            <SubServiceItem>Reroofing Projects</SubServiceItem>
-            <SubServiceItem>New Construction</SubServiceItem>
-            <SubServiceItem>Repairs</SubServiceItem>
-            <SubServiceItem>Maintenance Programs</SubServiceItem>
-            <SubServiceItem>24 Hour Emergency Service</SubServiceItem>
-            <SubServiceItem>
-              Applications:
-              <SubServiceList>
-                <SubServiceItem>
-                  Hot Asphalt (BUR) Roofing Systems
-                </SubServiceItem>
-                <SubServiceItem>Modified Roofing Systems</SubServiceItem>
-                <SubServiceItem>Thermoplastic Polyolefin (TPO)</SubServiceItem>
-                <SubServiceItem>Rubber (EPDM) Roofing Systems</SubServiceItem>
-              </SubServiceList>
-            </SubServiceItem>
-          </SubServiceList>
-        </ServiceList>
-      </ServiceDescription>
-      <ImageContainer>
+    <MainContainer>
+      <DescriptionContainer>
+        <ServiceDescription>
+          <Title>Flat Commercial Roofing</Title>
+          <ServiceType>
+            Hayden Building Maintenance Corp. has been installing quality
+            roofing systems since 1973 in the Tri-state NY area. A recognized
+            leader in the commercial roofing industry, Hayden specializes in
+            turn-key solutions for commercial, institutional, industrial, and
+            residential flat roofing applications of all sizes. The roofing
+            crews are experienced and certified installers trained in a variety
+            of flat roof products and applications. The professionals at Hayden
+            have the experience and knowledge to handle any project, regardless
+            of size or complexity.
+          </ServiceType>
+          <ServiceList>
+            Hayden offers the following services:
+            <SubServiceList>
+              <SubServiceItem>Reroofing Projects</SubServiceItem>
+              <SubServiceItem>New Construction</SubServiceItem>
+              <SubServiceItem>Repairs</SubServiceItem>
+              <SubServiceItem>
+                Applications:
+                <SubServiceList>
+                  <SubServiceItem>
+                    Hot Asphalt (BUR) Roofing Systems
+                  </SubServiceItem>
+                  <SubServiceItem>Modified Roofing Systems</SubServiceItem>
+                  <SubServiceItem>
+                    Thermoplastic Polyolefin (TPO)
+                  </SubServiceItem>
+                  <SubServiceItem>Rubber (EPDM) Roofing Systems</SubServiceItem>
+                </SubServiceList>
+              </SubServiceItem>
+            </SubServiceList>
+          </ServiceList>
+        </ServiceDescription>
+      </DescriptionContainer>
+      <OuterImageContainer>
         {images.map((filename, index) => (
           <EnlargableImage
             key={index}
@@ -150,7 +141,7 @@ const FlatCommercialRoofing = () => {
             }
           />
         ))}
-      </ImageContainer>
+      </OuterImageContainer>
       {enlargedImage && (
         <EnlargedImageWrapper>
           <CloseButton onClick={handleCloseButtonClick}>&times;</CloseButton>
@@ -161,7 +152,7 @@ const FlatCommercialRoofing = () => {
           />
         </EnlargedImageWrapper>
       )}
-    </>
+    </MainContainer>
   );
 };
 
