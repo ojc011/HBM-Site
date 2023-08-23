@@ -5,6 +5,13 @@ const smallDeviceQuery = "@media (max-width: 480px)";
 const mediumDeviceQuery = "@media (min-width: 481px) and (max-width: 768px)";
 const largeDeviceQuery = "@media (min-width: 769px)";
 
+export const DirectoryContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
 export const StyledBackgroundImage = styled.div`
   width: 100%;
   height: 100%;

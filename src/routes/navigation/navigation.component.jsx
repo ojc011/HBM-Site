@@ -51,17 +51,17 @@ const Navigation = () => {
   const location = useLocation();
   let burgerIconSrc = "/assets/whiteburger.png"; // default icon
 
-  if (location.pathname.includes("category/1")) {
+  if (location.pathname.includes("fcr")) {
     burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("category/2")) {
+  } else if (location.pathname.includes("sar")) {
     burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("category/3")) {
+  } else if (location.pathname.includes("masonry")) {
     burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("category/4")) {
+  } else if (location.pathname.includes("slate")) {
     burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("category/5")) {
+  } else if (location.pathname.includes("waterproofing")) {
     burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("category/6")) {
+  } else if (location.pathname.includes("maintenance")) {
     burgerIconSrc = "/assets/burger.png";
   }
 

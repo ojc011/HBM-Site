@@ -11,16 +11,17 @@ import Waterproofing from "./routes/waterproofing/waterproofing.component";
 import Maintenance from "./routes/maintenance/maintenance.component";
 
 function App() {
+
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path="category/1" element={<FlatCommercialRoofing />} />
-        <Route path="category/2" element={<SteepArchRoofing />} />
-        <Route path="category/3" element={<Masonry />} />
-        <Route path="category/4" element={<Slate />} />
-        <Route path="category/5" element={<Waterproofing />} /> 
-        <Route path="category/6" element={<Maintenance />} /> 
+        <Route path="fcr" element={<FlatCommercialRoofing />} />
+        <Route path="sar" element={<SteepArchRoofing />} />
+        <Route path="masonry" element={<Masonry />} />
+        <Route path="slate" element={<Slate />} />
+        <Route path="waterproofing" element={<Waterproofing />} /> 
+        <Route path="maintenance" element={<Maintenance />} /> 
       </Route>
     </Routes>
   );
