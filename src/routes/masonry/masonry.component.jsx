@@ -21,57 +21,46 @@ const Masonry = () => {
   useEffect(() => {
     const loadImages = async () => {
       const imageFilenames = [
-        "BJaysGlenOaksNY-min.jpg",
-        "DJI_0143-min.JPG",
-        "DJI_0144-min.JPG",
-        "DJI_0145-min.JPG",
-        "DJI_0146-min.JPG",
-        "DJI_0147-min.JPG",
-        "DJI_0148-min.JPG",
-        "DJI_0149-min.JPG",
-        "DJI_0150-min.JPG",
-        "DJI_0151-min.JPG",
-        "DJI_0154-min.jpg",
-        "DJI_0159-2-min.jpg",
-        "DJI_0161-min.jpg",
-        "DJI_0175-min.jpg",
-        "DJI_0176-min.jpg",
-        "DJI_0194-min.jpg",
-        "DJI_0199-min.jpg",
-        "DJI_0218-min.jpg",
-        "DJI_0221-min.jpg",
-        "DJI_0226-min.jpg",
-        "DJI_0227-min.jpg",
-        "DJI_0249-min.jpg",
-        "DJI_0250-min.jpg",
-        "DJI_0251-min.jpg",
-        "DJI_0262-min.jpg",
-        "DJI_0263-min.jpg",
-        "DJI_0264-min.jpg",
-        "DJI_0265-min.jpg",
-        "DJI_0266-min.jpg",
-        "DJI_0267-min.jpg",
-        "DJI_0272-min.jpg",
-        "DJI_0273-min.jpg",
-        "DJI_0274-min.jpg",
-        "DJI_0275-min.jpg",
-        "DJI_0278-min.jpg",
-        "DJI_0280-min.jpg",
-        "DJI_0281-min.jpg",
-        "DJI_0282-min.jpg",
-        "DJI_0283-min.jpg",
-        "DJI_0284-min.jpg",
-        "DJI_0285-min.jpg",
-        "NewOrleans073-min.jpg",
-        "NewOrleans117-min.jpg",
-        "NewOrleans118-min.jpg",
-        "NewOrleans173-min.jpg",
-        "NewOrleans175-min.jpg",
-        "P1040948-min.JPG",
-        "P1040949-min.JPG",
-        "P1040952-min.JPG",
-        "P1040955-min.JPG",
-        "P1040958-min.JPG",
+        "20110623-_MAD7449-min.jpg",
+        "20110623-_MAD7588-min.jpg",
+        "20110623-_MAD7577-min.jpg",
+        "20110623-_MAD7572-min.jpg",
+        "20110623-_MAD7569-min.jpg",
+        "20110623-_MAD7560-min.jpg",
+        "20110623-_MAD7558-min.jpg",
+        "20110623-_MAD7555-min.jpg",
+        "20110623-_MAD7554-min.jpg",
+        "20110623-_MAD7550-min.jpg",
+        "20110623-_MAD7548-min.jpg",
+        "20110623-_MAD7546-min.jpg",
+        "20110623-_MAD7541-min.jpg",
+        "20110623-_MAD7538-min.jpg",
+        "20110623-_MAD7533-min.jpg",
+        "20110623-_MAD7530-min.jpg",
+        "20110623-_MAD7525-min.jpg",
+        "20110623-_MAD7522-min.jpg",
+        "20110623-_MAD7520-min.jpg",
+        "20110623-_MAD7515-min.jpg",
+        "20110623-_MAD7512-min.jpg",
+        "20110623-_MAD7507-min.jpg",
+        "20110623-_MAD7504-min.jpg",
+        "20110623-_MAD7502-min.jpg",
+        "20110623-_MAD7499-min.jpg",
+        "20110623-_MAD7493-min.jpg",
+        "20110623-_MAD7484-min.jpg",
+        "20110623-_MAD7483-min.jpg",
+        "20110623-_MAD7481-min.jpg",
+        "20110623-_MAD7477-min.jpg",
+        "20110623-_MAD7475-min.jpg",
+        "20110623-_MAD7468-min.jpg",
+        "20110623-_MAD7465-min.jpg",
+        "20110623-_MAD7458-min.jpg",
+        "20110623-_MAD7453-min.jpg",
+        "20110623-_MAD7447-min.jpg",
+        "20110623-_MAD7444-min.jpg",
+        "20110623-_MAD7441-min.jpg",
+        "20110623-_MAD7435-min.jpg",
+        "20110623-_MAD7432-min.jpg",
       ];
 
       setImages(imageFilenames);
@@ -131,12 +120,11 @@ const Masonry = () => {
         {images.map((filename, index) => (
           <EnlargableImage
             key={index}
-            src={`/assets/flatcommercialroofing/${filename}`}
+            src={`/assets/masonry/${filename}`}
             alt={`Image ${index + 1}`}
             onClick={() =>
               handleImageClick(
-                process.env.PUBLIC_URL +
-                  `/assets/flatcommercialroofing/${filename}`
+                process.env.PUBLIC_URL + `/assets/masonry/${filename}`
               )
             }
           />
