@@ -31,17 +31,6 @@ const FlatCommercialRoofing = () => {
         "DJI_0175-min.jpg",
         "DJI_0176-min.jpg",
         "DJI_0227-min.jpg",
-        "DJI_0250-min.jpg",
-        "DJI_0251-min.jpg",
-        "DJI_0262-min.jpg",
-        "DJI_0267-min.jpg",
-        "DJI_0272-min.jpg",
-        "DJI_0273-min.jpg",
-        "DJI_0274-min.jpg",
-        "DJI_0283-min.jpg",
-        "DJI_0284-min.jpg",
-        "DJI_0285-min.jpg",
-        "P1040948-min.JPG",
       ];
 
       setImages(imageFilenames);

@@ -31,11 +31,6 @@ const Slate = () => {
         "DSC_0339.jpg",
         "SEP_6274.jpg",
         "SEP_6282.jpg",
-        "SEP_6304.jpg",
-        "SEP_6333.jpg",
-        "SEP_6345.jpg",
-        "SEP_6350.jpg",
-        "SEP_6355.jpg",
       ];
 
       setImages(imageFilenames);

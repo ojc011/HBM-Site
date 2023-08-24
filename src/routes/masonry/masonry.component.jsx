@@ -31,18 +31,6 @@ const Masonry = () => {
         "20110623-_MAD7477-min.jpg",
         "20110623-_MAD7493-min.jpg",
         "20110623-_MAD7499-min.jpg",
-        "20110623-_MAD7515-min.jpg",
-        "20110623-_MAD7520-min.jpg",
-        "20110623-_MAD7522-min.jpg",
-        "20110623-_MAD7530-min.jpg",
-        "20110623-_MAD7533-min.jpg",
-        "20110623-_MAD7538-min.jpg",
-        "20110623-_MAD7546-min.jpg",
-        "20110623-_MAD7548-min.jpg",
-        "20110623-_MAD7555-min.jpg",
-        "20110623-_MAD7560-min.jpg",
-        "20110623-_MAD7572-min.jpg",
-        "20110623-_MAD7577-min.jpg",
       ];
 
       setImages(imageFilenames);

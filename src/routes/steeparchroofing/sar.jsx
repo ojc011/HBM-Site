@@ -31,21 +31,6 @@ const SteepArchRoofing = () => {
         "DSC_1795.JPG",
         "DSC_1798.JPG",
         "DSC_1799.JPG",
-        "DSC_1802.JPG",
-        "DSC_1805.JPG",
-        "DSC_1811.JPG",
-        "DSC_1812.JPG",
-        "DSC_1813.JPG",
-        "DSC_1816.JPG",
-        "DSC_1820.JPG",
-        "DSC_1824.JPG",
-        "DSC_1826-min.JPG",
-        "DSC_1828-min.JPG",
-        "DSC_1832-min.JPG",
-        "DSC_1836-min.JPG",
-        "DSC_1837-min.JPG",
-        "DSC_1843-min.JPG",
-        "DSC_1847-min.JPG",
       ];
 
       setImages(imageFilenames);
