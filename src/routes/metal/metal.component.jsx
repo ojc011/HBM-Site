@@ -10,7 +10,6 @@ import {
   EnlargableImage,
   EnlargedImageWrapper,
   EnlargedImage,
-  CloseButton,
   MainContainer,
   OuterImageContainer,
 } from "./metal.styles";
@@ -144,7 +143,6 @@ const Metal = () => {
       </OuterImageContainer>
       {enlargedImage && (
         <EnlargedImageWrapper>
-          <CloseButton onClick={handleCloseButtonClick}>&times;</CloseButton>
           <EnlargedImage
             src={enlargedImage}
             alt="Enlarged"

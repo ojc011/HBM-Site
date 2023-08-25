@@ -28,15 +28,6 @@ export const Title = styled.h1`
   }
 `;
 
-export const Subtitle = styled.p`
-  font-size: 14px;
-  color: #666;
-  @media (max-width: 768px) {
-    /* Adjust styles for screens with width <= 768px (e.g., mobile devices) */
-    font-size: 12px;
-  }
-`;
-
 export const Section = styled.div`
   margin-top: 20px;
 `;

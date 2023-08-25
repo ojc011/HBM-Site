@@ -9,11 +9,26 @@ import {
   MobileMenuItem,
   MobileLogoAboveLinks,
   CloseButton,
+  DropdownItem,
+  DropdownMenu,
+  ArrowDown,
+  ArrowContainer,
 } from "./navigation.styles";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const location = useLocation();
+  const isOnSpecialRoute = [
+    "fcr",
+    "sar",
+    "masonry",
+    "slate",
+    "metal",
+    "maintenance",
+  ].includes(location.pathname.slice(1));
 
   const handleMobileMenuToggle = () => {
     if (!isMobileMenuOpen) {
@@ -48,32 +63,33 @@ const Navigation = () => {
     }
   };
 
-  const location = useLocation();
-  let burgerIconSrc = "/assets/whiteburger.png"; // default icon
-
-  if (location.pathname.includes("fcr")) {
-    burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("sar")) {
-    burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("masonry")) {
-    burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("slate")) {
-    burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("waterproofing")) {
-    burgerIconSrc = "/assets/burger.png";
-  } else if (location.pathname.includes("maintenance")) {
-    burgerIconSrc = "/assets/burger.png";
-  }
-
   return (
     <React.Fragment>
       <NavigationContainer>
         <LogoContainer to="/" onClick={scrollToTop}>
           <StyledLogo alt="Logo" src="/assets/logo1.png" />
         </LogoContainer>
+        {isOnSpecialRoute && (
+          <h3>
+            Our Services
+            <ArrowContainer onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+              <ArrowDown open={isDropdownOpen} />
+              {isDropdownOpen && (
+                <DropdownMenu>
+                  <DropdownItem to="/fcr">Flat Commercial Roofing</DropdownItem>
+                  <DropdownItem to="/sar">Steep Arch Roofing</DropdownItem>
+                  <DropdownItem to="/masonry">Masonry</DropdownItem>
+                  <DropdownItem to="/slate">Slate</DropdownItem>
+                  <DropdownItem to="/metal">Metal</DropdownItem>
+                  <DropdownItem to="/maintenance">Maintenance</DropdownItem>
+                </DropdownMenu>
+              )}
+            </ArrowContainer>
+          </h3>
+        )}
         <MobileMenuIcon onClick={handleMobileMenuToggle}>
           <img
-            src={burgerIconSrc}
+            src="/assets/whiteburger.png"
             alt="MobileMenuIcon"
             style={{ width: "85%", height: "85%" }}
           />

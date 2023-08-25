@@ -10,7 +10,6 @@ import {
   EnlargableImage,
   EnlargedImageWrapper,
   EnlargedImage,
-  CloseButton,
   MainContainer,
   OuterImageContainer,
 } from "./maintenance.styles";
@@ -113,7 +112,6 @@ const Maintenance = () => {
       </OuterImageContainer>
       {enlargedImage && (
         <EnlargedImageWrapper>
-          <CloseButton onClick={handleCloseButtonClick}>&times;</CloseButton>
           <EnlargedImage
             src={enlargedImage}
             alt="Enlarged"

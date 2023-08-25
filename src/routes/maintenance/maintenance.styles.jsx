@@ -40,6 +40,7 @@ export const MainContainer = styled.div`
   display: flex;
   align-items: stretch;
   height: 100vh;
+  position: fixed;
 `;
 
 export const Title = styled.h1`
@@ -193,21 +194,9 @@ export const EnlargedImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 `;
 
 export const EnlargedImage = styled.img`
   max-width: 100%;
   max-height: 100%;
-`;
-
-export const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #ff0000;
-  cursor: pointer;
 `;

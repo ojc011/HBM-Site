@@ -2,7 +2,6 @@ import React from "react";
 import {
   Container,
   Title,
-  Subtitle,
   Section,
   PolicyTitle,
   PurposeTitle,
@@ -13,8 +12,6 @@ const SafetyComponent = () => {
   return (
     <Container id="safety">
       <Title>Hazcom Policy and Safety</Title>
-      <Subtitle>Home / Hazcom Policy and Safety / Policy</Subtitle>
-
       <Section>
         <PolicyTitle>Policy</PolicyTitle>
         <p>
@@ -65,8 +62,7 @@ const SafetyComponent = () => {
           <ListItem>
             Hayden Building maintenance Corp.’s HAZCOM program has been
             established through the National Roofing Contractors Association
-            (NRCA) pilot program. Michael McWeeney functions as our HAZCOM
-            Administrator.
+            (NRCA) pilot program.
           </ListItem>
         </ul>
       </Section>

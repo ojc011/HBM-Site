@@ -1,17 +1,28 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+const smallDeviceQuery = "@media (max-width: 480px)";
+
 export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) =>
+    props.isOnSpecialRoute ? "space-around" : "space-between"};
   align-items: center;
   position: sticky;
   top: 0;
   background-color: transparent;
   z-index: 999;
   margin-bottom: 7.5px;
+  h3 {
+    color: white;
+    letter-spacing: 12px; /* This will space the letters out twice as far. */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* A slight shadow on each letter. */
+    ${smallDeviceQuery} {
+      letter-spacing: 7px;
+    }
+  }
 `;
 
 export const LogoContainer = styled(Link)``;
@@ -89,3 +100,47 @@ export const CloseButton = styled.button`
   }
 `;
 
+export const ArrowContainer = styled.div`
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const ArrowDown = styled.span`
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(
+    ${(props) => (props.open ? "315deg" : "135deg")}
+  ); /* Adjusted rotate based on state */
+  transition: transform 0.3s ease; /* Smooth rotation transition */
+`;
+
+export const DropdownMenu = styled.div`
+  position: absolute;
+  margin-top: 10px;
+  top: 100%; // Positioned right below the ArrowContainer
+  left: 50%;
+  transform: translateX(-50%); // Centered horizontally
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+`;
+
+export const DropdownItem = styled(Link)`
+  margin-bottom: 3px;
+  display: block;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 5px;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+`;

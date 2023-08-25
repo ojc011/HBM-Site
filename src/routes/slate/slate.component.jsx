@@ -10,7 +10,6 @@ import {
   EnlargableImage,
   EnlargedImageWrapper,
   EnlargedImage,
-  CloseButton,
   MainContainer,
   OuterImageContainer,
 } from "./slate.styles";
@@ -108,7 +107,6 @@ const Slate = () => {
       </OuterImageContainer>
       {enlargedImage && (
         <EnlargedImageWrapper>
-          <CloseButton onClick={handleCloseButtonClick}>&times;</CloseButton>
           <EnlargedImage
             src={enlargedImage}
             alt="Enlarged"

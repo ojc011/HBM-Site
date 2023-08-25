@@ -4,19 +4,19 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to bottom, #ca2236, #222a57);
-  /* Add a gradient background with a transition between the specified colors */
-  
+
   @media (min-width: 1600px) {
     max-width: 1600px;
-    margin: 0 auto; /* Center the content horizontally within the wrapper */
-    padding: 0 20px; /* Optional padding to provide space on the sides */
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 
 /* Global CSS */
 html {
   scroll-behavior: smooth;
+    height: 100%;
+    background: linear-gradient(to bottom, #222a57, #0000007c);
 }
 
 code {

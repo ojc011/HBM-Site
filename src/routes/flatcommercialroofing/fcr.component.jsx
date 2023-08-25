@@ -10,7 +10,6 @@ import {
   EnlargableImage,
   EnlargedImageWrapper,
   EnlargedImage,
-  CloseButton,
   MainContainer,
   OuterImageContainer,
 } from "./fcr.styles";
@@ -103,7 +102,6 @@ const FlatCommercialRoofing = () => {
       </OuterImageContainer>
       {enlargedImage && (
         <EnlargedImageWrapper>
-          <CloseButton onClick={handleCloseButtonClick}>&times;</CloseButton>
           <EnlargedImage
             src={enlargedImage}
             alt="Enlarged"

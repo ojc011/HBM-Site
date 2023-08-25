@@ -10,7 +10,6 @@ import {
   EnlargableImage,
   EnlargedImageWrapper,
   EnlargedImage,
-  CloseButton,
   MainContainer,
   OuterImageContainer,
 } from "./sar.styles";
@@ -53,9 +52,9 @@ const SteepArchRoofing = () => {
         <ServiceDescription>
           <Title>Steep Architectural Roofing</Title>
           <ServiceType>
-            Superior roofs are crafted by the finest roofers. With 50+ years
-            of unwavering reliability, Hayden Building Maintenance Corp. stands
-            as your foremost roofing expert. We specialize exclusively in
+            Superior roofs are crafted by the finest roofers. With 50+ years of
+            unwavering reliability, Hayden Building Maintenance Corp. stands as
+            your foremost roofing expert. We specialize exclusively in
             residential and steep-slope roofing solutions. Our adept team of
             extensively trained professionals comprehends the significance of
             your residential or commercial investment, striving to surpass your
@@ -94,7 +93,6 @@ const SteepArchRoofing = () => {
       </OuterImageContainer>
       {enlargedImage && (
         <EnlargedImageWrapper>
-          <CloseButton onClick={handleCloseButtonClick}>&times;</CloseButton>
           <EnlargedImage
             src={enlargedImage}
             alt="Enlarged"
