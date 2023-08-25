@@ -13,8 +13,8 @@ import {
   CloseButton,
   MainContainer,
   OuterImageContainer,
-} from "./waterproofing.styles";
-const Waterproofing = () => {
+} from "./metal.styles";
+const Metal = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [images, setImages] = useState([]);
 
@@ -156,4 +156,4 @@ const Waterproofing = () => {
   );
 };
 
-export default Waterproofing;
+export default Metal;

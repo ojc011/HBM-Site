@@ -51,35 +51,41 @@ const Masonry = () => {
     <MainContainer>
       <DescriptionContainer>
         <ServiceDescription>
-          <Title>Flat Commercial Roofing</Title>
+          <Title>Masonry Restoration</Title>
           <ServiceType>
-            Hayden Building Maintenance Corp. has been installing quality
-            roofing systems since 1973 in the Tri-state NY area. A recognized
-            leader in the commercial roofing industry, Hayden specializes in
-            turn-key solutions for commercial, institutional, industrial, and
-            residential flat roofing applications of all sizes. The roofing
-            crews are experienced and certified installers trained in a variety
-            of flat roof products and applications. The professionals at Hayden
-            have the experience and knowledge to handle any project, regardless
-            of size or complexity.
+            Hayden addresses your masonry needs comprehensively, from historical
+            to commercial and residential structures. Our adept team employs
+            traditional expertise and modern techniques to ensure secure
+            restoration, including repointing and cleaning. With diverse trade
+            skills, we assemble effective project teams for restoration. Amid
+            changing technologies, our commitment to service and craftsmanship
+            perseveres. We collaborate with architects, owners, and
+            preservationists to ensure successful masonry preservation.
           </ServiceType>
           <ServiceList>
             Hayden offers the following services:
             <SubServiceList>
-              <SubServiceItem>Reroofing Projects</SubServiceItem>
-              <SubServiceItem>New Construction</SubServiceItem>
-              <SubServiceItem>Repairs</SubServiceItem>
+              <SubServiceItem>Masonry Restoration</SubServiceItem>
+              <SubServiceItem>
+                Masonry Pointing – Sealing and Caulking
+              </SubServiceItem>
+              <SubServiceItem>
+                Facade Restoration / NYC Local Law 11 Experts
+              </SubServiceItem>
+              <SubServiceItem>Waterproofing</SubServiceItem>
               <SubServiceItem>
                 Applications:
                 <SubServiceList>
                   <SubServiceItem>
-                    Hot Asphalt (BUR) Roofing Systems
+                    Parapet Walls Restoration – Balcony Restoration
                   </SubServiceItem>
-                  <SubServiceItem>Modified Roofing Systems</SubServiceItem>
                   <SubServiceItem>
-                    Thermoplastic Polyolefin (TPO)
+                    All types - Painting and coating
                   </SubServiceItem>
-                  <SubServiceItem>Rubber (EPDM) Roofing Systems</SubServiceItem>
+                  <SubServiceItem>Parking Garage Restoration</SubServiceItem>
+                  <SubServiceItem>Building Cleaning</SubServiceItem>
+                  <SubServiceItem>Steel Remediation</SubServiceItem>
+                  <SubServiceItem>Structural Carpentry</SubServiceItem>
                 </SubServiceList>
               </SubServiceItem>
             </SubServiceList>

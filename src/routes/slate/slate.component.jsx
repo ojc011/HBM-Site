@@ -51,35 +51,41 @@ const Slate = () => {
     <MainContainer>
       <DescriptionContainer>
         <ServiceDescription>
-          <Title>Flat Commercial Roofing</Title>
+          <Title>Slate Roofing</Title>
           <ServiceType>
-            Hayden Building Maintenance Corp. has been installing quality
-            roofing systems since 1973 in the Tri-state NY area. A recognized
-            leader in the commercial roofing industry, Hayden specializes in
-            turn-key solutions for commercial, institutional, industrial, and
-            residential flat roofing applications of all sizes. The roofing
-            crews are experienced and certified installers trained in a variety
-            of flat roof products and applications. The professionals at Hayden
-            have the experience and knowledge to handle any project, regardless
-            of size or complexity.
+            Hayden Building Maintenance excels in delivering exquisite
+            residential slate roofing installations. Our specialized expertise,
+            honed over years of dedicated service, ensures unparalleled
+            craftsmanship in every slate roofing project. With a commitment to
+            high-end solutions, we bring timeless beauty and durability to your
+            residential roofing needs. Our skilled team's proficiency in slate
+            roofing is matched only by our dedication to customer satisfaction.
+            Choose Hayden for distinguished slate roofing services that combine
+            elegance, longevity, and unmatched skill.
           </ServiceType>
           <ServiceList>
-            Hayden offers the following services:
+            Hayden offers the following slate roofing services:
             <SubServiceList>
-              <SubServiceItem>Reroofing Projects</SubServiceItem>
-              <SubServiceItem>New Construction</SubServiceItem>
-              <SubServiceItem>Repairs</SubServiceItem>
+              <SubServiceItem>
+                Residential/Commercial High-End Slate Roofing Installations
+              </SubServiceItem>
+              <SubServiceItem>
+                Slate Roof Repairs and Maintenance
+              </SubServiceItem>
+              <SubServiceItem>
+                Slate Roof Inspections and Consultations
+              </SubServiceItem>
               <SubServiceItem>
                 Applications:
                 <SubServiceList>
                   <SubServiceItem>
-                    Hot Asphalt (BUR) Roofing Systems
+                    Custom Slate Patterns and Designs
                   </SubServiceItem>
-                  <SubServiceItem>Modified Roofing Systems</SubServiceItem>
+                  <SubServiceItem>Slate Roof Replacement</SubServiceItem>
+                  <SubServiceItem>Slate Roof Restoration</SubServiceItem>
                   <SubServiceItem>
-                    Thermoplastic Polyolefin (TPO)
+                    Expert Slate Selection and Sourcing
                   </SubServiceItem>
-                  <SubServiceItem>Rubber (EPDM) Roofing Systems</SubServiceItem>
                 </SubServiceList>
               </SubServiceItem>
             </SubServiceList>

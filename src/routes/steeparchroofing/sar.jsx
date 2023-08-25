@@ -51,37 +51,29 @@ const SteepArchRoofing = () => {
     <MainContainer>
       <DescriptionContainer>
         <ServiceDescription>
-          <Title>Flat Commercial Roofing</Title>
+          <Title>Steep Architectural Roofing</Title>
           <ServiceType>
-            Hayden Building Maintenance Corp. has been installing quality
-            roofing systems since 1973 in the Tri-state NY area. A recognized
-            leader in the commercial roofing industry, Hayden specializes in
-            turn-key solutions for commercial, institutional, industrial, and
-            residential flat roofing applications of all sizes. The roofing
-            crews are experienced and certified installers trained in a variety
-            of flat roof products and applications. The professionals at Hayden
-            have the experience and knowledge to handle any project, regardless
-            of size or complexity.
+            Superior roofs are crafted by the finest roofers. With 50+ years
+            of unwavering reliability, Hayden Building Maintenance Corp. stands
+            as your foremost roofing expert. We specialize exclusively in
+            residential and steep-slope roofing solutions. Our adept team of
+            extensively trained professionals comprehends the significance of
+            your residential or commercial investment, striving to surpass your
+            anticipations. Backed by comprehensive expertise, our professionals
+            are well-versed in a variety of roofing materials. Entrust your
+            roofing project to us for unmatched excellence and enduring value.
           </ServiceType>
           <ServiceList>
-            Hayden offers the following services:
+            Hayden offers the following roofing options:
             <SubServiceList>
-              <SubServiceItem>Reroofing Projects</SubServiceItem>
-              <SubServiceItem>New Construction</SubServiceItem>
-              <SubServiceItem>Repairs</SubServiceItem>
+              <SubServiceItem>Tile – clay and concrete</SubServiceItem>
               <SubServiceItem>
-                Applications:
-                <SubServiceList>
-                  <SubServiceItem>
-                    Hot Asphalt (BUR) Roofing Systems
-                  </SubServiceItem>
-                  <SubServiceItem>Modified Roofing Systems</SubServiceItem>
-                  <SubServiceItem>
-                    Thermoplastic Polyolefin (TPO)
-                  </SubServiceItem>
-                  <SubServiceItem>Rubber (EPDM) Roofing Systems</SubServiceItem>
-                </SubServiceList>
+                Wood Shake – cedar, pine and cypress
               </SubServiceItem>
+              <SubServiceItem>Copper/Metal</SubServiceItem>
+              <SubServiceItem>Gutters & Leaders</SubServiceItem>
+              <SubServiceItem>Snow Guards</SubServiceItem>
+              <SubServiceItem>Asphalt Shingle</SubServiceItem>
             </SubServiceList>
           </ServiceList>
         </ServiceDescription>

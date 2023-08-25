@@ -62,9 +62,9 @@ const Home = () => {
           {/* Waterproofing */}
           <DirectoryItemContainer key={5} id="services">
             <BackgroundImage imageurl="https://i.imgur.com/XBkbK5Y.jpg" />
-            <BodyLink to={`/waterproofing`}>
+            <BodyLink to={`/metal`}>
               <div>
-                <h2>Waterproofing</h2>
+                <h2>Metal</h2>
               </div>
             </BodyLink>
           </DirectoryItemContainer>
