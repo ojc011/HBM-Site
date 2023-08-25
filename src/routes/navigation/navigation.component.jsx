@@ -30,6 +30,28 @@ const Navigation = () => {
     "maintenance",
   ].includes(location.pathname.slice(1));
 
+  const handleDocumentClick = (e) => {
+    const dropdown = document.querySelector("[data-dropdown]");
+    const toggleButton = document.querySelector("[data-dropdown-toggle]");
+
+    if (
+      dropdown &&
+      !dropdown.contains(e.target) &&
+      !toggleButton.contains(e.target)
+    ) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    if (isDropdownOpen) {
+      document.addEventListener("click", handleDocumentClick);
+    }
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, [isDropdownOpen]);
+
   const handleMobileMenuToggle = () => {
     if (!isMobileMenuOpen) {
       setIsMobileMenuOpen(true);
@@ -72,10 +94,13 @@ const Navigation = () => {
         {isOnSpecialRoute && (
           <h3>
             Our Services
-            <ArrowContainer onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+            <ArrowContainer
+              data-dropdown-toggle
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            >
               <ArrowDown open={isDropdownOpen} />
               {isDropdownOpen && (
-                <DropdownMenu>
+                <DropdownMenu data-dropdown>
                   <DropdownItem to="/fcr">Flat Commercial Roofing</DropdownItem>
                   <DropdownItem to="/sar">Steep Arch Roofing</DropdownItem>
                   <DropdownItem to="/masonry">Masonry</DropdownItem>

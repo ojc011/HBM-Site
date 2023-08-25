@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const smallDeviceQuery = "@media (max-width: 480px)";
+const smallDeviceQuery = "@media (max-width: 599px)";
+const largeDeviceQuery = "@media (min-width: 600px)";
 
 export const NavigationContainer = styled.div`
   height: 70px;
@@ -121,7 +122,7 @@ export const ArrowDown = styled.span`
 
 export const DropdownMenu = styled.div`
   position: absolute;
-  margin-top: 10px;
+  margin-top: 35px;
   top: 100%; // Positioned right below the ArrowContainer
   left: 50%;
   transform: translateX(-50%); // Centered horizontally
@@ -130,17 +131,25 @@ export const DropdownMenu = styled.div`
   border-radius: 5px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 10;
+  ${smallDeviceQuery} {
+    transform: translateX(-50%);
+  }
 `;
 
 export const DropdownItem = styled(Link)`
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   display: block;
   padding: 5px 15px;
   text-decoration: none;
   color: black;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 
   &:hover {
     background-color: #f2f2f2;
+  }
+  ${largeDeviceQuery} {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;

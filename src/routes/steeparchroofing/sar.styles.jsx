@@ -10,7 +10,6 @@ export const DescriptionContainer = styled.div`
   padding: 10px;
   border-radius: 5px;
   width: 33%;
-  position: fixed;
   height: 100vh;
   right: 0;
   overflow-y: auto;
@@ -28,7 +27,7 @@ export const OuterImageContainer = styled.div`
   align-items: center;
   width: 66%;
   height: 100vh;
-  padding: 20px;
+  padding-left: 20px;
   overflow-y: auto;
 
   ${smallDeviceQuery} {
@@ -40,7 +39,6 @@ export const MainContainer = styled.div`
   display: flex;
   align-items: stretch;
   height: 100vh;
-  position: fixed;
 `;
 
 export const Title = styled.h1`
