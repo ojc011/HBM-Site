@@ -24,11 +24,9 @@ export const NavigationContainer = styled.div`
     letter-spacing: 10px;
     font-size: 22px; /* Default font size */
     white-space: nowrap; /* Prevent text from breaking into multiple lines */
-    overflow: hidden; /* Hide any overflowed content */
-    text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
 
     ${smallDeviceQuery} {
-      font-size: 9px; /* Adjust font size for small devices */
+      font-size: 12px; /* Adjust font size for small devices */
       letter-spacing: 2px;
     }
     ${mediumDeviceQuery} {
