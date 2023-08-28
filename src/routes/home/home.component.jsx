@@ -19,26 +19,6 @@ const Home = () => {
     <div id="home">
       <Fragment>
         <DirectoryContainer>
-          {/* Flat Commercial Roofing */}
-          <DirectoryItemContainer key={1} id="services">
-            <BackgroundImage imageurl="https://i.imgur.com/nrnVNtm.jpg" />
-            <BodyLink to={`/fcr`}>
-              <div>
-                <h2>Flat Commercial Roofing</h2>
-              </div>
-            </BodyLink>
-          </DirectoryItemContainer>
-
-          {/* Steep Architectural Roofing */}
-          <DirectoryItemContainer key={2} id="services">
-            <BackgroundImage imageurl="https://i.imgur.com/ZptgJFH.jpg" />
-            <BodyLink to={`/sar`}>
-              <div>
-                <h2>Steep Architectural Roofing</h2>
-              </div>
-            </BodyLink>
-          </DirectoryItemContainer>
-
           {/* Masonry Restoration */}
           <DirectoryItemContainer key={3} id="services">
             <BackgroundImage imageurl="https://i.imgur.com/R0yh6TC.jpg" />
@@ -58,23 +38,30 @@ const Home = () => {
               </div>
             </BodyLink>
           </DirectoryItemContainer>
-
-          {/* Waterproofing */}
-          <DirectoryItemContainer key={5} id="services">
-            <BackgroundImage imageurl="https://i.imgur.com/XBkbK5Y.jpg" />
-            <BodyLink to={`/metal`}>
-              <div>
-                <h2>Metal</h2>
-              </div>
-            </BodyLink>
-          </DirectoryItemContainer>
-
           {/* Emergency Maintenance */}
           <DirectoryItemContainer key={6} id="services">
             <BackgroundImage imageurl="https://i.imgur.com/55uJioc.jpg" />
             <BodyLink to={`/maintenance`}>
               <div>
                 <h2>Emergency Maintenance</h2>
+              </div>
+            </BodyLink>
+          </DirectoryItemContainer>
+          {/* Flat Commercial Roofing */}
+          <DirectoryItemContainer key={1} id="services">
+            <BackgroundImage imageurl="https://i.imgur.com/nrnVNtm.jpg" />
+            <BodyLink to={`/fcr`}>
+              <div>
+                <h2>Flat Commercial Roofing</h2>
+              </div>
+            </BodyLink>
+          </DirectoryItemContainer>
+          {/* Steep Architectural Roofing */}
+          <DirectoryItemContainer key={2} id="services">
+            <BackgroundImage imageurl="https://i.imgur.com/ZptgJFH.jpg" />
+            <BodyLink to={`/sar`}>
+              <div>
+                <h2>Steep Architectural Roofing</h2>
               </div>
             </BodyLink>
           </DirectoryItemContainer>
