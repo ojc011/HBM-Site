@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const smallDeviceQuery = "@media (max-width: 1023px)";
+const smallDeviceQuery = "@media (max-width: 599px)";
+const mediumDeviceQuery = "@media (min-width: 600px) and (max-width: 1024px)";
 const largeDeviceQuery = "@media (min-width: 1024px)";
 
 export const NavigationContainer = styled.div`
@@ -15,16 +16,24 @@ export const NavigationContainer = styled.div`
   background-color: transparent;
   z-index: 999;
   margin-bottom: 7.5px;
+
+  /* Style for h3 elements */
   h3 {
     text-align: center;
     color: white;
     letter-spacing: 10px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    font-size: 18px; /* Default font size */
+    font-size: 22px; /* Default font size */
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+    overflow: hidden; /* Hide any overflowed content */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
 
     ${smallDeviceQuery} {
-      font-size: 16px; /* Adjust font size for small devices */
-      letter-spacing: 6px;
+      font-size: 9px; /* Adjust font size for small devices */
+      letter-spacing: 2px;
+    }
+    ${mediumDeviceQuery} {
+      font-size: 16px;
+      letter-spacing: 5px;
     }
   }
 `;
