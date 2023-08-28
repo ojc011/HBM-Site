@@ -1,15 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const smallDeviceQuery = "@media (max-width: 599px)";
-const largeDeviceQuery = "@media (min-width: 600px)";
+const smallDeviceQuery = "@media (max-width: 1023px)";
+const largeDeviceQuery = "@media (min-width: 1024px)";
 
 export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: ${(props) =>
-    props.isOnSpecialRoute ? "space-around" : "space-between"};
+  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
@@ -17,11 +16,15 @@ export const NavigationContainer = styled.div`
   z-index: 999;
   margin-bottom: 7.5px;
   h3 {
+    text-align: center;
     color: white;
-    letter-spacing: 12px; /* This will space the letters out twice as far. */
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* A slight shadow on each letter. */
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    font-size: 18px; /* Default font size */
+
     ${smallDeviceQuery} {
-      letter-spacing: 7px;
+      font-size: 16px; /* Adjust font size for small devices */
+      letter-spacing: 6px;
     }
   }
 `;
@@ -47,10 +50,14 @@ export const MobileMenuIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 50px; /* Ensure minimum width to prevent squishing */
+  min-height: 50px; /* Ensure minimum height to prevent squishing */
+
   @media (max-width: 768px) {
-    // Assuming 768px is the breakpoint for small devices
     width: 40px;
     height: 40px;
+    min-width: 40px; /* Adjust minimum width for small devices */
+    min-height: 40px; /* Adjust minimum height for small devices */
   }
 `;
 

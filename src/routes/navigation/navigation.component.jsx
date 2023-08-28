@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import {
   NavigationContainer,
@@ -19,8 +19,10 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true); // Track whether the page is at the top
 
   const location = useLocation();
+  const isOnRootRoute = location.pathname === "/";
   const isOnSpecialRoute = [
     "fcr",
     "sar",
@@ -30,27 +32,19 @@ const Navigation = () => {
     "maintenance",
   ].includes(location.pathname.slice(1));
 
-  const handleDocumentClick = (e) => {
-    const dropdown = document.querySelector("[data-dropdown]");
-    const toggleButton = document.querySelector("[data-dropdown-toggle]");
-
-    if (
-      dropdown &&
-      !dropdown.contains(e.target) &&
-      !toggleButton.contains(e.target)
-    ) {
-      setIsDropdownOpen(false);
-    }
-  };
-
-  React.useEffect(() => {
-    if (isDropdownOpen) {
-      document.addEventListener("click", handleDocumentClick);
-    }
-    return () => {
-      document.removeEventListener("click", handleDocumentClick);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
     };
-  }, [isDropdownOpen]);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const handleMobileMenuToggle = () => {
     if (!isMobileMenuOpen) {
@@ -73,10 +67,6 @@ const Navigation = () => {
     }, 300);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const handleNavLinkClick = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -85,13 +75,36 @@ const Navigation = () => {
     }
   };
 
+  const handleDocumentClick = (e) => {
+    const dropdown = document.querySelector("[data-dropdown]");
+    const toggleButton = document.querySelector("[data-dropdown-toggle]");
+
+    if (
+      dropdown &&
+      !dropdown.contains(e.target) &&
+      !toggleButton.contains(e.target)
+    ) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isDropdownOpen) {
+      document.addEventListener("click", handleDocumentClick);
+    }
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, [isDropdownOpen]);
+
   return (
     <React.Fragment>
-      <NavigationContainer>
+      <NavigationContainer isAtTop={isAtTop}>
         <LogoContainer to="/" onClick={scrollToTop}>
           <StyledLogo alt="Logo" src="/assets/logo1.png" />
         </LogoContainer>
-        {isOnSpecialRoute && (
+        {isAtTop && isOnRootRoute && <h3>Hayden Building Maintenance</h3>}
+        {isAtTop && isOnSpecialRoute && (
           <h3>
             Our Services
             <ArrowContainer
