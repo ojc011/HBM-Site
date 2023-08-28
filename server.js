@@ -35,9 +35,11 @@ const submissionSchema = new mongoose.Schema({
     comment: String,
     howDidYouHear: String,
     otherText: String,
+    submissionDate: Date, // Add the new field here
 });
 
 const Submission = mongoose.model('Submission', submissionSchema);
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -111,9 +113,10 @@ app.post("/api/send-email", (req, res) => {
             typeOfService,
             comment,
             howDidYouHear,
-            otherText
+            otherText,
+            submissionDate: new Date(), // Set the submission date to the current date and time
         });
-
+        
         try {
             await submission.save();
             console.log("Data saved to database");

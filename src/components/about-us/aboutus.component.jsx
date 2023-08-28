@@ -41,7 +41,12 @@ const MainPage = () => {
             across all aspects of the industry.
           </p>
         </DescriptionContainer>
-        <Link to="/keypersonnel">
+        <Link
+          to="/keypersonnel"
+          onClick={() => {
+            scrollToTop();
+          }}
+        >
           {" "}
           {/* Add Link component here */}
           <CompanyPicContainer>
