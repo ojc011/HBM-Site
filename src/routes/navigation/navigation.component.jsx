@@ -29,7 +29,6 @@ const Navigation = () => {
     "sar",
     "masonry",
     "slate",
-    "metal",
     "maintenance",
   ].includes(location.pathname.slice(1));
 
@@ -120,7 +119,6 @@ const Navigation = () => {
                   <DropdownItem to="/sar">Steep Arch Roofing</DropdownItem>
                   <DropdownItem to="/masonry">Masonry</DropdownItem>
                   <DropdownItem to="/slate">Slate</DropdownItem>
-                  <DropdownItem to="/metal">Metal</DropdownItem>
                   <DropdownItem to="/maintenance">Maintenance</DropdownItem>
                 </DropdownMenu>
               )}
