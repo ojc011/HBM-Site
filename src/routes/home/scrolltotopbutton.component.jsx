@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaArrowUp } from "react-icons/fa"; // Import the arrow icon
+import { useLocation } from "react-router-dom";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const location = useLocation();
 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
@@ -39,13 +42,15 @@ const ScrollToTopButton = () => {
       >
         <FaArrowUpIcon />
       </ButtonContainer>
-      <QuoteButton
-        to="/"
-        onClick={() => handleNavLinkClick("contact")}
-        style={{ opacity: isVisible ? 1 : 0 }}
-      >
-        GET A QUOTE!
-      </QuoteButton>
+      {location.pathname === "/" && (
+        <QuoteButton
+          to="/"
+          onClick={() => handleNavLinkClick("contact")}
+          style={{ opacity: isVisible ? 1 : 0 }}
+        >
+          Contact!
+        </QuoteButton>
+      )}
     </>
   );
 };
@@ -70,12 +75,12 @@ const ButtonContainer = styled.div`
 `;
 
 const FaArrowUpIcon = styled(FaArrowUp)`
-  font-size: 24px;
+  font-size: 22px;
   color: black;
 `;
 
 export const QuoteButton = styled.button`
-  background-color: rgba(34, 42, 87);
+  background-color: #ca2236;
   color: white;
   border: none;
   border-radius: 5px;

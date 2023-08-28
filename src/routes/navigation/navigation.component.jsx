@@ -23,6 +23,7 @@ const Navigation = () => {
 
   const location = useLocation();
   const isOnRootRoute = location.pathname === "/";
+  const isOnKPRoute = location.pathname === "/keypersonnel";
   const isOnSpecialRoute = [
     "fcr",
     "sar",
@@ -104,7 +105,8 @@ const Navigation = () => {
           <StyledLogo alt="Logo" src="/assets/logo1.png" />
         </LogoContainer>
         {isAtTop && isOnRootRoute && <h3>Hayden Building Maintenance</h3>}
-        {isAtTop && isOnSpecialRoute && (
+        {isAtTop && isOnKPRoute && <h3>Key Personnel</h3>}
+        {isOnSpecialRoute && (
           <h3>
             Our Services
             <ArrowContainer
@@ -159,6 +161,15 @@ const Navigation = () => {
           </MobileMenuItem>
           <MobileMenuItem to="/" onClick={() => handleNavLinkClick("aboutus")}>
             About Us
+          </MobileMenuItem>
+          <MobileMenuItem
+            to="/keypersonnel"
+            onClick={() => {
+              scrollToTop();
+              handleMobileMenuClose();
+            }}
+          >
+            Key Personnel
           </MobileMenuItem>
           <MobileMenuItem to="/" onClick={() => handleNavLinkClick("contact")}>
             Contact Us

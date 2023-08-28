@@ -7,16 +7,21 @@ import {
   CompanyPic,
   RightContainer,
   ServiceType,
+  LinkButton,
 } from "./aboutus.styles";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <MPContainer id="aboutus">
       <LeftContainer>
         <DescriptionContainer>
           <h1>
-            HAYDEN BUILDING MAINTENANCE CORPORATION, THE ROOFING
-            SPECIALIST
+            HAYDEN BUILDING MAINTENANCE CORPORATION, THE ROOFING SPECIALIST
           </h1>
           <p>
             Hayden Building Maintenance Corporation, known as HBMC and
@@ -36,11 +41,23 @@ const MainPage = () => {
             across all aspects of the industry.
           </p>
         </DescriptionContainer>
-        <CompanyPicContainer>
-          <CompanyPic>
-            <img alt="" src="/assets/staffpic.png" />
-          </CompanyPic>
-        </CompanyPicContainer>
+        <Link to="/keypersonnel">
+          {" "}
+          {/* Add Link component here */}
+          <CompanyPicContainer>
+            <CompanyPic>
+              <LinkButton
+                to="/keypersonnel"
+                onClick={() => {
+                  scrollToTop();
+                }}
+              >
+                Key Personnel
+              </LinkButton>
+              <img alt="" src="/assets/staffpic.png" />
+            </CompanyPic>
+          </CompanyPicContainer>
+        </Link>
       </LeftContainer>
       <RightContainer>
         <ServiceType>

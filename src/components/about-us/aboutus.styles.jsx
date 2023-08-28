@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const smallDeviceQuery = "@media (max-width: 480px)";
@@ -51,6 +52,8 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const CompanyPicContainer = styled.div`
+  position: relative; /* Add this line to make sure the button is positioned relative to this container */
+
   margin-top: 20px;
   width: 100%;
   display: flex;
@@ -115,5 +118,26 @@ export const ServiceType = styled.div`
     ${largeDeviceQuery} {
       font-size: 18px; /* Increase font size by 2 points on large devices */
     }
+  }
+`;
+
+export const LinkButton = styled(Link)`
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 10px 20px;
+  background-color: rgba(34, 42, 87);
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  border-top-right-radius: 5px;
+  z-index: 9999;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: #a11a2b;
+  }
+  ${smallDeviceQuery} {
+    padding: 5px 10px;
+    font-size: 9px;
   }
 `;
