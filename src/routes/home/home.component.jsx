@@ -1,4 +1,3 @@
-// Home.jsx
 import React from "react";
 import MainPage from "../../components/about-us/aboutus.component";
 import SafetyComponent from "../../components/safety/safety.component";
@@ -12,7 +11,8 @@ import {
   DirectoryItemContainer,
   BodyLink,
   DirectoryContainer,
-} from "./home.component.styles"; // Import your styled components
+} from "./home.component.styles";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
@@ -66,6 +66,22 @@ const Home = () => {
             </BodyLink>
           </DirectoryItemContainer>
         </DirectoryContainer>
+
+        {/* Add meta tags */}
+        <Helmet>
+          <title>Hayden Building Maintenance Corporation</title>
+          <meta
+            name="description"
+            content="Leading the industry in commercial roofing, waterproofing, masonry, and restoration services. Proudly serving Rockland County, NY, and beyond with exceptional craftsmanship and tailored solutions for your building's needs."
+          />
+          <meta
+            name="keywords"
+            content="commercial roofing, waterproofing, restoration, Rockland County, NY, Roofing Specialist, Commercial Roofing Solutions, Steep Sloped Roofing, Flat Roof Installation, Roofing Services in Rockland County, NY, Professional Roofing Contractors, Roof Repair and Restoration, High-Quality Roofing Materials, Top-Rated Roofing Company, Waterproofing and Masonry Services, Experienced Roofing Crews, Trusted Roofing Partner, Building Envelope Maintenance, Slate Roofing Installation, Emergency Roof Repairs, Industry-Leading Roofing Solutions, Quality Craftsmanship, Expert Roofing Solutions, Turn-Key Roofing Services, Roofing Installation Experts"
+          />
+          <meta name="geo.region" content="US-NY" />
+          <meta name="geo.placename" content="Rockland County" />
+          <meta name="geo.position" content="41.0907;-74.0151" />
+        </Helmet>
 
         <MainPage />
         <ContactForm />
