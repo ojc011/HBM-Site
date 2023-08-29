@@ -5,6 +5,9 @@ export const KPContainer = styled.div`
   background-color: #f5f5f5;
   text-align: center; /* Add this line to center-align the content */
   border-radius: 5px;
+  height: 87vh;
+  overflow-y: auto; /* Enable vertical scrolling within this component */
+  padding: 10px;
 `;
 
 export const PersonnelContainer = styled.div`
@@ -13,7 +16,6 @@ export const PersonnelContainer = styled.div`
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

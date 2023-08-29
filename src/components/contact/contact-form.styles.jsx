@@ -5,7 +5,7 @@ const mediumDeviceQuery = "@media (min-width: 768px)";
 const smallDeviceQuery = "@media (max-width: 767px)";
 
 export const Title = styled.h1`
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
@@ -13,7 +13,8 @@ export const Title = styled.h1`
   background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
   border-radius: 5px;
-  width: 33%;
+  width: 30%;
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
 `;
 
 export const PageContainer = styled.div`
@@ -25,38 +26,36 @@ export const PageContainer = styled.div`
   border-radius: 5px;
   overflow: hidden; /* Add this line to hide any overflow content */
 
-  @media (min-width: 768px) {
-    ${mediumDeviceQuery} {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.5;
-        z-index: -1;
-      }
+  ${mediumDeviceQuery} {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      z-index: -1;
     }
   }
 `;
 
 export const ContactContainer = styled.div`
   background-color: rgba(34, 42, 87, 0.7);
-  padding: 20px;
+  padding: 10px; /* Reduced padding */
   border-radius: 8px;
-  width: 100%; /* Initially take 100% width on all devices */
+  width: 100%;
 
   ${mediumDeviceQuery} {
-    width: 66%; /* Take up 66% width on medium devices */
+    width: 50%; /* Reduced width for medium devices */
   }
 
   ${largeDeviceQuery} {
-    width: 33%; /* Take up 33% width on large devices */
+    width: 30%; /* Reduced width for large devices */
   }
 
   ${smallDeviceQuery} {
-    width: 100%; /* Take up 100% width on small or mobile devices */
+    width: 100%;
   }
 `;
 
@@ -83,7 +82,7 @@ export const Form = styled.form`
 export const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 export const Label = styled.label`
@@ -92,7 +91,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
@@ -101,12 +100,12 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
   width: 100%;
-  height: 120px;
+  height: 100px;
 `;
 
 export const Select = styled.select`

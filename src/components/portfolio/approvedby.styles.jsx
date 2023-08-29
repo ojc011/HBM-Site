@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 2px;
   color: #ffff; /* Set Title text color to black */
@@ -9,11 +9,12 @@ export const Title = styled.h1`
   background-color: rgba(0, 0, 0, 0.6);
   padding: 5px;
   border-radius: 5px;
-  width: 33%; /* Make Title span the entire width */
+  width: 30%; /* Make Title span the entire width */
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px auto; /* Center horizontally */
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
 `;
 
 export const Container = styled.div`

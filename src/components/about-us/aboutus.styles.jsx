@@ -48,19 +48,20 @@ export const DescriptionContainer = styled.div`
     opacity: 1;
     font-size: 16px;
     line-height: 1.5;
+    width: 85%;
+    margin: 10px auto;
   }
 `;
 
 export const CompanyPicContainer = styled.div`
   position: relative; /* Add this line to make sure the button is positioned relative to this container */
-
   margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
 
   ${largeDeviceQuery} {
-    width: 75%;
+    width: 85%;
     margin: 20px auto;
   }
   &:hover {
@@ -98,6 +99,8 @@ export const RightContainer = styled.div`
 export const ServiceType = styled.div`
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
+  width: 85%;
+  margin: 10px auto;
   &:hover {
     transform: scale(1.05);
   }

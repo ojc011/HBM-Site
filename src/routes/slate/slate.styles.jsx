@@ -38,7 +38,9 @@ export const OuterImageContainer = styled.div`
 export const MainContainer = styled.div`
   display: flex;
   align-items: stretch;
-  height: 100vh;
+  height: 88vh;
+  overflow-y: auto; /* Enable vertical scrolling within this component */
+  padding: 10px;
 `;
 
 export const Title = styled.h1`
@@ -55,19 +57,19 @@ export const Title = styled.h1`
 
   ${smallDeviceQuery} {
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     padding: 5px;
   }
 
   ${mediumDeviceQuery} {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px;
   }
 
   ${largeDeviceQuery} {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px;
   }
 `;
@@ -146,14 +148,14 @@ export const SubServiceList = styled.ul`
 
   ${smallDeviceQuery} {
     padding-left: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 `;
 
 export const SubServiceItem = styled.li`
   font-size: 16px;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 
   ${smallDeviceQuery} {
     font-size: 12px;

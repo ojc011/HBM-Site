@@ -16,6 +16,7 @@ export const NavigationContainer = styled.div`
   background-color: transparent;
   z-index: 999;
   margin-bottom: 7.5px;
+  margin-top: 5px;
 
   /* Style for h3 elements */
   h3 {
