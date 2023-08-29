@@ -24,6 +24,7 @@ export const NavigationContainer = styled.div`
     letter-spacing: 10px;
     font-size: 22px; /* Default font size */
     white-space: nowrap; /* Prevent text from breaking into multiple lines */
+    text-transform: uppercase;
 
     ${smallDeviceQuery} {
       font-size: 12px; /* Adjust font size for small devices */

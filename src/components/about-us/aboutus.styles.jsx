@@ -76,9 +76,6 @@ export const CompanyPic = styled.div`
     border-radius: 4px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 `;
 
@@ -128,7 +125,7 @@ export const LinkButton = styled(Link)`
   position: absolute;
   top: 5px;
   left: 5px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: rgba(34, 42, 87);
   border-radius: 5px;
   color: white;

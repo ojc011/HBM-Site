@@ -56,10 +56,10 @@ const ScrollToTopButton = () => {
 };
 const ButtonContainer = styled.div`
   position: fixed;
-  bottom: 70px; // This will position the ScrollToTop button 70px above the bottom.
+  bottom: 60px; // This will position the ScrollToTop button 70px above the bottom.
   left: 20px;
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   background-color: #ccc;
   display: flex;
   align-items: center;
@@ -84,7 +84,7 @@ export const QuoteButton = styled.button`
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   cursor: pointer;
   font-weight: bold;
   position: fixed;
