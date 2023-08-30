@@ -19,34 +19,6 @@ const Home = () => {
     <div id="home">
       <Fragment>
         <DirectoryContainer>
-          {/* Masonry Restoration */}
-          <DirectoryItemContainer key={3} id="services">
-            <BackgroundImage imageurl="https://i.imgur.com/R0yh6TC.jpg" />
-            <BodyLink to={`/masonry`}>
-              <div>
-                <h2>Masonry Restoration</h2>
-              </div>
-            </BodyLink>
-          </DirectoryItemContainer>
-
-          {/* Slate Roofing */}
-          <DirectoryItemContainer key={4} id="services">
-            <BackgroundImage imageurl="https://i.imgur.com/xRIVxHC.jpg" />
-            <BodyLink to={`/slate`}>
-              <div>
-                <h2>Slate Roofing</h2>
-              </div>
-            </BodyLink>
-          </DirectoryItemContainer>
-          {/* Emergency Maintenance */}
-          <DirectoryItemContainer key={6} id="services">
-            <BackgroundImage imageurl="https://i.imgur.com/55uJioc.jpg" />
-            <BodyLink to={`/maintenance`}>
-              <div>
-                <h2>Emergency Maintenance</h2>
-              </div>
-            </BodyLink>
-          </DirectoryItemContainer>
           {/* Flat Commercial Roofing */}
           <DirectoryItemContainer key={1} id="services">
             <BackgroundImage imageurl="https://i.imgur.com/nrnVNtm.jpg" />
@@ -62,6 +34,33 @@ const Home = () => {
             <BodyLink to={`/sar`}>
               <div>
                 <h2>Steep Architectural Roofing</h2>
+              </div>
+            </BodyLink>
+          </DirectoryItemContainer>{" "}
+          {/* Masonry Restoration */}
+          <DirectoryItemContainer key={3} id="services">
+            <BackgroundImage imageurl="https://i.imgur.com/R0yh6TC.jpg" />
+            <BodyLink to={`/masonry`}>
+              <div>
+                <h2>Masonry Restoration</h2>
+              </div>
+            </BodyLink>
+          </DirectoryItemContainer>
+          {/* Slate Roofing */}
+          <DirectoryItemContainer key={4} id="services">
+            <BackgroundImage imageurl="https://i.imgur.com/xRIVxHC.jpg" />
+            <BodyLink to={`/slate`}>
+              <div>
+                <h2>Slate Roofing</h2>
+              </div>
+            </BodyLink>
+          </DirectoryItemContainer>
+          {/* Emergency Maintenance */}
+          <DirectoryItemContainer key={6} id="services">
+            <BackgroundImage imageurl="https://i.imgur.com/55uJioc.jpg" />
+            <BodyLink to={`/maintenance`}>
+              <div>
+                <h2>Emergency Maintenance</h2>
               </div>
             </BodyLink>
           </DirectoryItemContainer>

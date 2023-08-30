@@ -64,9 +64,6 @@ export const CompanyPicContainer = styled.div`
     width: 85%;
     margin: 20px auto;
   }
-  &:hover {
-    transform: scale(1.05);
-  }
 `;
 
 export const CompanyPic = styled.div`

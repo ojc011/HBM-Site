@@ -5,13 +5,13 @@ const mediumDeviceQuery = "@media (min-width: 768px)";
 const smallDeviceQuery = "@media (max-width: 767px)";
 
 export const Title = styled.h1`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 5px;
+  padding-right: auto;
   border-radius: 5px;
   width: 30%;
   white-space: nowrap; /* Prevent text from breaking into multiple lines */

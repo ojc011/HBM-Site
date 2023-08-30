@@ -5,6 +5,17 @@ const smallDeviceQuery = "@media (max-width: 599px)";
 const mediumDeviceQuery = "@media (min-width: 600px) and (max-width: 1024px)";
 const largeDeviceQuery = "@media (min-width: 1024px)";
 
+const fadeIn = `
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
 export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
@@ -26,19 +37,46 @@ export const NavigationContainer = styled.div`
     font-size: 22px; /* Default font size */
     white-space: nowrap; /* Prevent text from breaking into multiple lines */
     text-transform: uppercase;
+    animation: fadeIn 0.5s ease-in-out;
+    opacity: ${(props) => (props.isVisible ? 1 : 0)};
+    transition: opacity 0.5s ease-in-out;
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0) 0%,
+      transparent 100%
+    );
+    backdrop-filter: blur(5px); /* For the blurring effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    border-radius: 5px;
 
     ${smallDeviceQuery} {
-      font-size: 12px; /* Adjust font size for small devices */
-      letter-spacing: 2px;
+      font-size: 10px; /* Adjust font size for small devices */
+      letter-spacing: 1.5px;
     }
     ${mediumDeviceQuery} {
       font-size: 16px;
       letter-spacing: 5px;
     }
-  }
+    ${fadeIn}
+  } /* Call the fadeIn keyframes here */
 `;
 
-export const LogoContainer = styled(Link)``;
+export const LogoContainer = styled(Link)`
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  animation: ${(props) =>
+    props.isClicked ? `flipHorizontal 0.8s linear` : "none"};
+  &:hover {
+    transform: scale(1.15);
+  }
+  @keyframes flipHorizontal {
+    0% {
+      transform: perspective(400px) rotateY(0);
+    }
+    100% {
+      transform: perspective(400px) rotateY(1turn);
+    }
+  }
+`;
 
 export const StyledLogo = styled.img`
   display: block;
@@ -59,14 +97,30 @@ export const MobileMenuIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 50px; /* Ensure minimum width to prevent squishing */
-  min-height: 50px; /* Ensure minimum height to prevent squishing */
+  min-width: 50px;
+  min-height: 50px;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  animation: ${(props) =>
+    props.isBurgerClicked ? `spin 0.8s linear` : "none"};
+
+  &:hover {
+    transform: scale(1.25);
+  }
 
   @media (max-width: 768px) {
     width: 40px;
     height: 40px;
-    min-width: 40px; /* Adjust minimum width for small devices */
-    min-height: 40px; /* Adjust minimum height for small devices */
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 `;
 
@@ -94,6 +148,14 @@ export const MobileMenuItem = styled(Link)`
     font-weight: bold;
     font-size: 14px;
     text-align: center;
+  }
+
+  /* Add transitions for smooth animation */
+  transition: transform 0.8s ease, opacity 0.8s ease;
+
+  &:hover {
+    transform: translateX(10px); /* Slide to the right */
+    opacity: 0.8; /* Slight opacity change */
   }
 `;
 

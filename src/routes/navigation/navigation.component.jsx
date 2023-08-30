@@ -20,6 +20,9 @@ const Navigation = () => {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true); // Track whether the page is at the top
+  const [isClicked, setIsClicked] = useState(false);
+  const [isBurgerClicked, setIsBurgerClicked] = useState(false);
+  const [isH3Visible, setIsH3Visible] = useState(false);
 
   const location = useLocation();
   const isOnRootRoute = location.pathname === "/";
@@ -97,13 +100,37 @@ const Navigation = () => {
     };
   }, [isDropdownOpen]);
 
+  useEffect(() => {
+    setIsH3Visible(
+      isAtTop && (isOnRootRoute || isOnKPRoute || isOnSpecialRoute)
+    );
+  }, [isAtTop, isOnRootRoute, isOnKPRoute, isOnSpecialRoute]);
+
+  const handleClick = () => {
+    setIsClicked(true);
+    // If you want to reset the state after the animation finishes (after 0.8 seconds)
+    setTimeout(() => setIsClicked(false), 800);
+  };
+  const handleBurgerClick = () => {
+    setIsBurgerClicked(true);
+    // If you want to reset the state after the animation finishes (after 0.8 seconds)
+    setTimeout(() => setIsBurgerClicked(false), 800);
+  };
+
   return (
     <React.Fragment>
-      <NavigationContainer isAtTop={isAtTop}>
-        <LogoContainer to="/" onClick={scrollToTop}>
+      <NavigationContainer isAtTop={isAtTop} isVisible={isH3Visible}>
+        <LogoContainer
+          to="/"
+          isClicked={isClicked}
+          onClick={() => {
+            handleClick();
+            scrollToTop();
+          }}
+        >
           <StyledLogo alt="Logo" src="/assets/logo1.png" />
         </LogoContainer>
-        {isAtTop && isOnRootRoute && <h3>Hayden Building Maintenance</h3>}
+        {isAtTop && isOnRootRoute && <h3>Hayden Building Maintenance CORP</h3>}
         {isAtTop && isOnKPRoute && <h3>Key Personnel</h3>}
         {isOnSpecialRoute && (
           <h3>
@@ -124,8 +151,14 @@ const Navigation = () => {
               )}
             </ArrowContainer>
           </h3>
-        )}
-        <MobileMenuIcon onClick={handleMobileMenuToggle}>
+        )}{" "}
+        <MobileMenuIcon
+          isBurgerClicked={isBurgerClicked}
+          onClick={() => {
+            handleBurgerClick();
+            handleMobileMenuToggle();
+          }}
+        >
           <img
             src="/assets/whiteburger.png"
             alt="MobileMenuIcon"
