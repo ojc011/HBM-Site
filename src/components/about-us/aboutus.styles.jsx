@@ -15,7 +15,6 @@ export const MPContainer = styled.div`
 
 export const LeftContainer = styled.div`
   background-color: #222a57;
-  opacity: 0.98;
   padding: 20px;
 
   ${mediumDeviceQuery} {
@@ -39,13 +38,11 @@ export const DescriptionContainer = styled.div`
   }
 
   h1 {
-    opacity: 1;
     font-size: 24px;
     margin-bottom: 10px;
   }
 
   p {
-    opacity: 1;
     font-size: 16px;
     line-height: 1.5;
     width: 85%;
@@ -68,7 +65,6 @@ export const CompanyPicContainer = styled.div`
 
 export const CompanyPic = styled.div`
   img {
-    opacity: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 4px;
@@ -79,7 +75,6 @@ export const CompanyPic = styled.div`
 
 export const RightContainer = styled.div`
   background-color: #222a57;
-  opacity: 0.98;
   padding: 20px;
   text-align: center; /* Center text on large devices */
   font-size: 18px; /* Increase font size by 2 points on large devices */
@@ -103,7 +98,6 @@ export const ServiceType = styled.div`
   }
 
   h3 {
-    opacity: 1;
     font-size: 24px;
     margin-bottom: 10px;
     ${largeDeviceQuery} {
@@ -112,7 +106,6 @@ export const ServiceType = styled.div`
   }
 
   p {
-    opacity: 1;
     font-size: 16px;
     line-height: 1.5;
     ${largeDeviceQuery} {

@@ -174,7 +174,7 @@ const sharedStyles = `
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 26px;
   margin: 5px;
   position: relative;
 
@@ -220,7 +220,7 @@ const OptionsContainer = styled.button`
   right: 20px;
   background-color: #222a57;
   color: white;
-  border: none;
+  border: 1px solid black;
   border-radius: 5px;
   padding: ${({ isExpanded }) => (isExpanded ? "15px" : "5px")};
   cursor: pointer;
