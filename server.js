@@ -83,17 +83,20 @@ app.post("/api/send-email", (req, res) => {
         to: process.env.EMAIL_ACC,
         subject: "HBM WEBSITE CONTACT",
         html: `
-      <p>Name: ${name}</p>
-      <p>Email: ${userEmail}</p>
-      <p>Phone Number: ${phoneNumber}</p>
-      <p>Company Name: ${companyName}</p>
-      <p>Address: ${address}</p>
-      <p>Type of Service: ${typeOfService}</p>
-      <p>Comment: ${comment}</p>
-      <p>How Did You Hear About Us: ${howDidYouHear}</p>
-      ${howDidYouHear === "Other" ? `<p>Other Text: ${otherText}</p>` : ""}
-    `,
-    };
+        <div style="border: 2px solid #e0e0e0; padding: 15px; max-width: 600px; font-family: Arial, sans-serif;">
+            <h2 style="color: #333; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${userEmail}</p>
+            <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+            <p><strong>Company Name:</strong> ${companyName}</p>
+            <p><strong>Address:</strong> ${address}</p>
+            <p><strong>Type of Service:</strong> ${typeOfService}</p>
+            <p><strong>Comment:</strong> ${comment}</p>
+            <p><strong>How Did You Hear About Us:</strong> ${howDidYouHear}</p>
+            ${howDidYouHear === "Other" ? `<p><strong>Other:</strong> ${otherText}</p>` : ""}
+        </div>
+        `,
+    };    
 
     transporter.sendMail(mailOptions, async (error, info) => {
         if (error) {
