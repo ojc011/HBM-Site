@@ -51,25 +51,26 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const CompanyPicContainer = styled.div`
-  position: relative; /* Add this line to make sure the button is positioned relative to this container */
+  position: relative;
   margin-top: 20px;
-  width: 100%;
+  width: ${(props) => (props.isEnlarged ? "100%" : "85%")};
   display: flex;
   justify-content: center;
 
   ${largeDeviceQuery} {
-    width: 85%;
     margin: 20px auto;
   }
 `;
 
 export const CompanyPic = styled.div`
+  cursor: pointer; // Add a pointer cursor to hint that it's clickable
   img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
+    width: ${(props) => (props.isEnlarged ? "100%" : "auto")};
   }
 `;
 
