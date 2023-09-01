@@ -16,7 +16,7 @@ import { useLocation } from "react-router-dom";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(window.innerWidth > 1449);
   const [cursorX, setCursorX] = useState(0);
   const [cursorY, setCursorY] = useState(0);
 
@@ -26,6 +26,22 @@ const ScrollToTopButton = () => {
     window.addEventListener("scroll", toggleVisibility);
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1449) {
+        setIsExpanded(true);
+      } else {
+        setIsExpanded(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -167,6 +183,10 @@ const TooltipText = styled.span`
   left: ${({ cursorX }) => `${cursorX}px`};
   transform: translate(-100%, 0);
   font-size: 16px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const sharedStyles = `

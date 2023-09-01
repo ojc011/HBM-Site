@@ -37,7 +37,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0);
+      setIsAtTop(window.scrollY <= 5); // Consider the top range within 5px
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
