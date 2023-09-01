@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollToTopButton from "../home/scrolltotopbutton.component";
+import ScrollToTopButton from "../../shared/globalbuttons/scrolltotopbutton.component";
 import {
   KPContainer,
   PersonnelContainer,
@@ -206,8 +206,8 @@ const KeyPersonnel = () => {
           </PersonnelInfo>
         </PersonnelCard>
         {/* Add blocks for other personnel */}
+        <ScrollToTopButton />
       </PersonnelContainer>
-      <ScrollToTopButton />
     </KPContainer>
   );
 };

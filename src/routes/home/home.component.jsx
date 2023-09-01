@@ -5,7 +5,7 @@ import ApprovedBy from "../../components/portfolio/slideshow.component";
 import ContactForm from "../../components/contact/contact-form.component";
 import { Fragment } from "react";
 import Footer from "../../components/footer/footer.component";
-import ScrollToTopButton from "./scrolltotopbutton.component";
+import ScrollToTopButton from "../../shared/globalbuttons/scrolltotopbutton.component";
 import {
   BackgroundImage,
   DirectoryItemContainer,

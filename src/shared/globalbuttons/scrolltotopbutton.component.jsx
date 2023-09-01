@@ -186,6 +186,11 @@ const sharedStyles = `
     opacity: 1;
     visibility: visible;
   }
+
+  &:hover > svg { 
+    fill: black; 
+    stroke: black;
+  }
 `;
 
 const ButtonContainer = styled.div`

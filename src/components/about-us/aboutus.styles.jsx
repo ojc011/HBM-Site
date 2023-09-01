@@ -53,11 +53,12 @@ export const DescriptionContainer = styled.div`
 export const CompanyPicContainer = styled.div`
   position: relative;
   margin-top: 20px;
-  width: ${(props) => (props.isEnlarged ? "100%" : "85%")};
+  width: 100%;
   display: flex;
   justify-content: center;
 
   ${largeDeviceQuery} {
+    width: 85%;
     margin: 20px auto;
   }
 `;
@@ -70,7 +71,6 @@ export const CompanyPic = styled.div`
     border-radius: 4px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    width: ${(props) => (props.isEnlarged ? "100%" : "auto")};
   }
 `;
 
@@ -125,7 +125,7 @@ export const LinkButton = styled(Link)`
   color: white;
   text-decoration: none;
   border-top-right-radius: 5px;
-  z-index: 9999;
+  z-index: 999;
   transition: background-color 0.3s ease-in-out;
   &:hover {
     background-color: #a11a2b;
