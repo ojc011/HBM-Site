@@ -40,14 +40,8 @@ export const NavigationContainer = styled.div`
     animation: fadeIn 0.5s ease-in-out;
     opacity: ${(props) => (props.isVisible ? 1 : 0)};
     transition: opacity 0.5s ease-in-out;
-    background: radial-gradient(
-      circle at center,
-      rgba(255, 255, 255, 0) 0%,
-      transparent 100%
-    );
-    backdrop-filter: blur(5px); /* For the blurring effect */
-    -webkit-backdrop-filter: blur(5px); /* For Safari */
-    border-radius: 5px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
 
     ${smallDeviceQuery} {
       font-size: 10px; /* Adjust font size for small devices */
