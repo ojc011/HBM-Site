@@ -57,7 +57,7 @@ const Home = () => {
           </DirectoryItemContainer>
           {/* Emergency Maintenance */}
           <DirectoryItemContainer key={6} id="services">
-            <BackgroundImage imageurl="https://i.imgur.com/55uJioc.jpg" />
+            <BackgroundImage imageurl="https://i.imgur.com/Dk2Psvd.jpg" />
             <BodyLink to={`/maintenance`}>
               <div>
                 <h2>Emergency Maintenance</h2>
