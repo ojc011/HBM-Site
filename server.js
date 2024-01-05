@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require("express");
+const forceHttps = require('express-force-https')
 const bodyParser = require("body-parser"); 
 const nodemailer = require("nodemailer");
 const cors = require("cors");
@@ -7,6 +8,9 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const app = express();
+
+app.use(forceHttps);
+
 const port = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactFormDB";
 
