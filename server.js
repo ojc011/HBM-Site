@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require("express");
-const forceHttps = require('express-force-https')
+const forceHttps = require('express-force-https');
 const bodyParser = require("body-parser"); 
 const nodemailer = require("nodemailer");
 const cors = require("cors");
@@ -8,6 +8,16 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const app = express();
+
+// SSL Redirect Middleware
+if (process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    else
+      next()
+  });
+}
 
 app.use(forceHttps);
 
