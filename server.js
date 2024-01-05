@@ -12,6 +12,14 @@ const app = express();
 // Force HTTPS for the entire application
 app.use(forceHttps);
 
+app.use((req, res, next) => {
+    if (req.hostname === 'roofline.com') {
+        res.redirect(301, `https://www.roofline.com${req.url}`);
+    } else {
+        next();
+    }
+});
+
 const port = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactFormDB";
 
