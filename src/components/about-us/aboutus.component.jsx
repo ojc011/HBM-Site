@@ -20,19 +20,16 @@ const MainPage = () => {
     <MPContainer id="aboutus">
       <LeftContainer>
         <DescriptionContainer>
-          <h1>
-            HAYDEN BUILDING MAINTENANCE CORPORATION, THE ROOFING SPECIALIST
-          </h1>
+          <h1>HAYDEN BUILDING MAINTENANCE CORPORATION</h1>
           <p>
-            Hayden Building Maintenance Corporation, known as HBMC and
-            recognized as The Roofing Specialist, stands as an industry
-            frontrunner in the fields of commercial roofing, waterproofing, and
-            restoration. With an impressive portfolio that spans across national
-            governmental and military facilities, our reach extends to
-            partnering with esteemed entities such as Wal-Mart, Xerox, Feil
-            Organization, Federal Express, Stop & Shop, Kohl’s, Coca-Cola
-            Bottling Company, Pyramid Company, UPS, Baxter Healthcare, Toys ‘R’
-            Us, and Verizon Wireless, among others. Our reputation for
+            Hayden Building Maintenance Corporation (HBMC), stands as an
+            industry frontrunner in the fields of commercial roofing,
+            waterproofing, and restoration. With an impressive portfolio that
+            spans across national governmental and military facilities, our
+            reach extends to partnering with esteemed entities such as Wal-Mart,
+            Xerox, Feil Organization, Federal Express, Stop & Shop, Kohl’s,
+            Coca-Cola Bottling Company, Pyramid Company, UPS, Baxter Healthcare,
+            Toys ‘R’ Us, and Verizon Wireless, among others. Our reputation for
             excellence is grounded in an unwavering commitment to precision and
             quality, as exemplified by our meticulous workmanship and
             time-tested expertise. By tailoring our solutions to meet the unique

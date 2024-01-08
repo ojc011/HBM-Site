@@ -12,7 +12,6 @@ export const Title = styled.h1`
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
   padding-right: auto;
-  border-radius: 5px;
   width: 30%;
   white-space: nowrap; /* Prevent text from breaking into multiple lines */
 `;
@@ -23,7 +22,6 @@ export const PageContainer = styled.div`
   align-items: center;
   position: relative;
   margin-bottom: 7.5px;
-  border-radius: 5px;
   overflow: hidden; /* Add this line to hide any overflow content */
 
   ${mediumDeviceQuery} {
@@ -43,7 +41,6 @@ export const PageContainer = styled.div`
 export const ContactContainer = styled.div`
   background-color: rgba(34, 42, 87, 0.7);
   padding: 10px; /* Reduced padding */
-  border-radius: 8px;
   width: 100%;
 
   ${mediumDeviceQuery} {
@@ -93,7 +90,6 @@ export const Label = styled.label`
 export const Input = styled.input`
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
   margin-top: 5px;
   width: 100%;
   height: 40px;
@@ -102,7 +98,6 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
   margin-top: 5px;
   width: 100%;
   height: 100px;
@@ -111,7 +106,6 @@ export const TextArea = styled.textarea`
 export const Select = styled.select`
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
   margin-top: 5px;
   width: 100%;
   height: 40px;
@@ -120,7 +114,6 @@ export const Select = styled.select`
 export const OtherTextInput = styled.input`
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
   margin-top: 5px;
   width: 100%;
   height: 40px;
@@ -131,7 +124,6 @@ export const SubmitButton = styled.button`
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   width: 100%;
   height: 40px;

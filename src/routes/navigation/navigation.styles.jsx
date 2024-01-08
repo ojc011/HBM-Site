@@ -40,8 +40,6 @@ export const NavigationContainer = styled.div`
     animation: fadeIn 0.5s ease-in-out;
     opacity: ${(props) => (props.isVisible ? 1 : 0)};
     transition: opacity 0.5s ease-in-out;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000;
 
     ${smallDeviceQuery} {
       font-size: 10px; /* Adjust font size for small devices */

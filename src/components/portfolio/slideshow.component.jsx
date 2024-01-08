@@ -4,6 +4,12 @@ import Testimonials from "./casestudy.component";
 
 const items = [
   {
+    imageSrc: "https://i.imgur.com/IrTo414.png",
+    title: "Sika",
+    description:
+      "Sika manufactures thermoplastic (PVC), single ply, commercial roofing and waterproofing membranes. Sika roofing and waterproofing systems, products and services are designed to precisely fit your specific projects needs. With more than 40 years of roofing and waterproofing order propecia online experience in locations all over the world.",
+  },
+  {
     imageSrc: "https://i.imgur.com/5wvcLJn.png",
     title: "GAF Material Corporation",
     description:
@@ -44,12 +50,6 @@ const items = [
     title: "Soprema",
     description:
       "Soprema offers a comprehensive line of roofing, waterproofing, wall protection and civil engineering solutions combining superior products and systems with decades of proven performance.",
-  },
-  {
-    imageSrc: "https://i.imgur.com/IrTo414.png",
-    title: "Sika",
-    description:
-      "Sika manufactures thermoplastic (PVC), single ply, commercial roofing and waterproofing membranes. Sika roofing and waterproofing systems, products and services are designed to precisely fit your specific projects needs. With more than 40 years of roofing and waterproofing order propecia online experience in locations all over the world.",
   },
   {
     imageSrc: "https://i.imgur.com/1Zy3spM.png",

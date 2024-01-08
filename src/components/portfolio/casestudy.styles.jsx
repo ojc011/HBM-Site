@@ -5,7 +5,6 @@ export const TestimonialsContainer = styled.div`
   background-color: #f3f3f3;
   padding: 20px;
   border: 2px solid #000000;
-  border-radius: 5px;
   margin-bottom: 7.5px;
 `;
 
@@ -33,7 +32,6 @@ export const TestimonialContentContainer = styled.div`
 export const TestimonialCard = styled.div`
   opacity: 1;
   background-color: #ffffff;
-  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 10px;
@@ -70,7 +68,6 @@ export const ArrowButton = styled.button`
   border: none;
   padding: 0;
   cursor: pointer;
-  border-radius: 5px;
   font-size: 24px;
 `;
 

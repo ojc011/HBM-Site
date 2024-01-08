@@ -31,35 +31,6 @@ const Footer = () => {
             </FooterClickableLink>
           </ContactDetails>
         </ContactItem>
-        <ContactItem>
-          <ContactTitle>LOUISIANA OFFICE</ContactTitle>
-          <ContactDetails>5600 Jefferson Highway</ContactDetails>
-          <ContactDetails>W4 Suite 122</ContactDetails>
-          <ContactDetails>Harahan, LA 70123</ContactDetails>
-          <ContactDetails>
-            Phone:{" "}
-            <FooterClickablePhoneNumber href="tel:504-736-0800">
-              504-736-0800
-            </FooterClickablePhoneNumber>
-          </ContactDetails>
-          <ContactDetails>
-            Fax:{" "}
-            <FooterClickablePhoneNumber href="tel:504-734-2640">
-              504-734-2640
-            </FooterClickablePhoneNumber>
-          </ContactDetails>
-        </ContactItem>
-        <ContactItem>
-          <ContactTitle>FLORIDA OFFICE</ContactTitle>
-          <ContactDetails>3259 SW 14th Place</ContactDetails>
-          <ContactDetails>Boynton Beach, FL 33426</ContactDetails>
-          <ContactDetails>
-            Phone:{" "}
-            <FooterClickablePhoneNumber href="tel:561-423-1552">
-              561-423-1552
-            </FooterClickablePhoneNumber>
-          </ContactDetails>
-        </ContactItem>
       </ContactInfo>
     </FooterContainer>
   );

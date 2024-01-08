@@ -162,21 +162,6 @@ const KeyPersonnel = () => {
           </PersonnelInfo>
         </PersonnelCard>
         <PersonnelCard>
-          <PersonnelTitle>Keith Koval – Service Manager</PersonnelTitle>
-          <PersonnelInfo>
-            Keith Koval brings a wealth of 17 years of dedicated experience
-            within the roofing industry. His journey began with the role of
-            overseeing sales and managing projects for a residential shingle
-            division, laying the foundation for his roofing expertise. Over
-            time, Keith transitioned into the realm of commercial roofing, where
-            he immersed himself in diverse roofing systems. His proficiency now
-            spans a spectrum including SBS, BUR, and Single Ply roofing,
-            encompassing EPDM, TPO, and PVC roofs. With a well-rounded
-            background, Keith is adept at delivering comprehensive roofing
-            solutions.
-          </PersonnelInfo>
-        </PersonnelCard>
-        <PersonnelCard>
           <PersonnelTitle>Gary Bruno - Roofing Foreman</PersonnelTitle>
           <PersonnelInfo>
             Gary Bruno is a second-generation roofer with over 47 years of

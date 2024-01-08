@@ -14,17 +14,22 @@ export const ContactInfo = styled.div`
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
+  align-items: center; /* Center the items horizontally */
+  justify-content: center; /* Center the items vertically */
 
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
   }
 `;
 
 export const ContactItem = styled.div`
   padding: 10px;
+  align-items: center;
   text-align: center;
+  display: flex; /* Added flex display */
+  flex-direction: column; /* Added flex-direction column */
+  justify-content: center; /* Center the content vertically */
 
   @media (min-width: 768px) {
     flex-basis: calc(33.33% - 20px);

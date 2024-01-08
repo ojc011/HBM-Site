@@ -8,7 +8,6 @@ export const Title = styled.h1`
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
   padding: auto;
-  border-radius: 5px;
   width: 30%; /* Make Title span the entire width */
   display: flex;
   flex-direction: column;
@@ -24,7 +23,6 @@ export const Container = styled.div`
   overflow: hidden;
   margin-bottom: 7.5px;
   border: 2px solid #000000;
-  border-radius: 5px;
 `;
 
 export const ParentContainer = styled.div`
@@ -70,7 +68,6 @@ export const ItemContainer = styled.div`
   flex: 0 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
-  border-radius: 8px;
   width: 90%; /* Reduce the width on small screens */
   max-width: 300px; /* Limit the maximum width for consistency */
   transition: transform 0.3s ease; /* Add a transition for the hover effect */
@@ -88,7 +85,6 @@ export const ItemContainer = styled.div`
 export const ItemImage = styled.img`
   width: 100%;
   height: auto;
-  border-radius: 10px;
   object-fit: contain;
   margin-bottom: 5px;
 `;
@@ -121,7 +117,6 @@ export const SlideButton = styled.button`
   border: none;
   margin: 10px;
   padding: 10px 20px;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -146,5 +141,4 @@ export const BackgroundComponent = styled.div`
   background-size: cover; /* Scale the image to cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent the image from repeating */
-  border-radius: 5px;
 `;

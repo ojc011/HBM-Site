@@ -6,9 +6,8 @@ const mediumDeviceQuery = "@media (min-width: 481px) and (max-width: 768px)";
 const largeDeviceQuery = "@media (min-width: 769px)";
 
 export const MPContainer = styled.div`
-  border-radius: 5px;
   margin-bottom: 7.5px;
-  border: 5px solid #ca2236;
+  border: 3px solid #ca2236;
   color: #ffffff;
   font-family: Arial, sans-serif;
 `;
