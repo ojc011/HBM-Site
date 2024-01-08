@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require("express");
-const forceHttps = require('express-force-https');
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
@@ -9,12 +8,18 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// Force HTTPS for the entire application
-app.use(forceHttps);
-
+// Middleware to handle redirection from roofline.com to www.roofline.com
 app.use((req, res, next) => {
     if (req.hostname === 'roofline.com') {
         return res.redirect(301, `https://www.roofline.com${req.url}`);
+    }
+    next();
+});
+
+// Force HTTPS for the entire application
+app.use((req, res, next) => {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+        return res.redirect(301, `https://${req.hostname}${req.url}`);
     }
     next();
 });
