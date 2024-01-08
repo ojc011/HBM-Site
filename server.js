@@ -5,12 +5,17 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require('path');
 const mongoose = require('mongoose');
-const sslRedirect = require('heroku-ssl-redirect');
 
 const app = express();
 
-// Enable HTTPS redirection middleware
-app.use(sslRedirect());
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    else
+      next()
+  })
+}
 
 const port = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactFormDB";
