@@ -14,10 +14,9 @@ app.use(forceHttps);
 
 app.use((req, res, next) => {
     if (req.hostname === 'roofline.com') {
-        res.redirect(301, `https://www.roofline.com${req.url}`);
-    } else {
-        next();
+        return res.redirect(301, `https://www.roofline.com${req.url}`);
     }
+    next();
 });
 
 const port = process.env.PORT || 3001;
