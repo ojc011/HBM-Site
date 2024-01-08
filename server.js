@@ -9,6 +9,10 @@ const mongoose = require('mongoose');
 
 const app = express();
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use((req, res, next) => {
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+    next();
+});
 
 const port = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/contactFormDB';
