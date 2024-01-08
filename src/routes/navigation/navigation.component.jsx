@@ -131,7 +131,9 @@ const Navigation = () => {
           <StyledLogo alt="Logo" src="/assets/logo1.png" />
         </LogoContainer>
         {isAtTop && isOnRootRoute && (
-          <h3>Hayden Building Maintenance Corporation</h3>
+          <h3>
+            Hayden Building <br></br>Maintenance Corporation
+          </h3>
         )}
         {isAtTop && isOnKPRoute && <h3>Key Personnel</h3>}
         {isOnSpecialRoute && (

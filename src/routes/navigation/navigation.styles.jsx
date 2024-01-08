@@ -33,6 +33,7 @@ export const NavigationContainer = styled.div`
   h3 {
     text-align: center;
     color: white;
+    text-shadow: 2px 2px 2px black;
     letter-spacing: 10px;
     font-size: 22px; /* Default font size */
     white-space: nowrap; /* Prevent text from breaking into multiple lines */
@@ -42,7 +43,7 @@ export const NavigationContainer = styled.div`
     transition: opacity 0.5s ease-in-out;
 
     ${smallDeviceQuery} {
-      font-size: 10px; /* Adjust font size for small devices */
+      font-size: 16px; /* Adjust font size for small devices */
       letter-spacing: 1.5px;
     }
     ${mediumDeviceQuery} {
@@ -207,6 +208,7 @@ export const DropdownMenu = styled.div`
 `;
 
 export const DropdownItem = styled(Link)`
+  text-shadow: 0px 0px 0px black;
   margin-bottom: 5px;
   display: block;
   padding: 5px 15px;
