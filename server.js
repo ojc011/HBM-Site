@@ -8,21 +8,14 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// Middleware to handle redirection from roofline.com to www.roofline.com
-app.use((req, res, next) => {
-    if (req.hostname === 'roofline.com') {
-        return res.redirect(301, `https://www.roofline.com${req.url}`);
-    }
-    next();
-});
-
-// Force HTTPS for the entire application
-app.use((req, res, next) => {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-        return res.redirect(301, `https://${req.headers.host}${req.url}`);
-    }
-    next();
-});
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    else
+      next()
+  })
+}
 
 const port = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactFormDB";
