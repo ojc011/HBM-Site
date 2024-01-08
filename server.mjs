@@ -1,9 +1,9 @@
-import express from 'express';
-import enforce from 'express-sslify';
+const express = require('express');
+const enforce = require('express-sslify');
 require('dotenv').config();
-const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
 
@@ -11,9 +11,7 @@ const app = express();
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 const port = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactFormDB";
-
-
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/contactFormDB';
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
