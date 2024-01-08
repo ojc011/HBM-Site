@@ -1,5 +1,5 @@
-import sslRedirect from 'heroku-ssl-redirect';
 import express from 'express';
+import enforce from 'express-sslify';
 require('dotenv').config();
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
@@ -8,7 +8,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const app = express();
-app.use(sslRedirect());
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 const port = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactFormDB";
