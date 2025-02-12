@@ -15,8 +15,8 @@ const Footer = () => {
       <ContactInfo>
         <ContactItem>
           <ContactTitle>HEADQUARTERS</ContactTitle>
-          <ContactDetails>169 Western Highway</ContactDetails>
-          <ContactDetails>West Nyack, NY 10994</ContactDetails>
+          <ContactDetails>115 Route 303, PO Box 220</ContactDetails>
+          <ContactDetails>Tappan, NY 10983</ContactDetails>
           <ContactDetails>
             Phone:{" "}
             <FooterClickablePhoneNumber href="tel:800-807-0878">
