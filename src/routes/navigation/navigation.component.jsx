@@ -219,7 +219,7 @@ const Navigation = () => {
             Safety
           </MobileMenuItem>
           <MobileMenuItem to="/" onClick={scrollToTop}>
-            <p>&copy; 2023 Hayden Building Maintenance Inc.</p>
+            <p>&copy; 2025 Hayden Building Maintenance Inc.</p>
           </MobileMenuItem>
         </MobileMenu>
       )}
